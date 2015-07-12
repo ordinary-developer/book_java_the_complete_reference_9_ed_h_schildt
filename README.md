@@ -1,4 +1,4 @@
-[project information]
+project information
 -------------------
 
 
@@ -10,7 +10,7 @@
 
 
 
-[installation and configuration] 
+installation and configuration
 ------------------------------
 
  
@@ -19,16 +19,16 @@
 
 
  
-[basic usage]
--------------
+basic usage
+-----------
 
  
- `$ git clone https://ordinary-developer@bitbucket.org/ordinary-developer/java_the_complete_reference_9_ed_h_shildt.git`
+ `$ git clone https://gitlab.com/book_synopses_and_code_samples/java_the_complete_reference_9_ed_h_schildt.git`
 
 
 
  
-[license]
+license
 ---------
 
 
@@ -37,7 +37,7 @@
 
 
 
-[contributing] 
+contributing
 --------------
  
 
