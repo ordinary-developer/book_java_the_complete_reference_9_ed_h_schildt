@@ -1,0 +1,14 @@
+ ########################
+ java_built_in_exceptions
+ ########################
+
+ 
+ java_built_in_exceptions
+ ========================
+ 
+ Subclasses of the "RuntimeException" class are unchecked exceptions
+ and need not be included in any method's throws lists.
+ Other exceptions are checked exceptions and they need be included in 
+ method's throws lists.
+
+ Practically all java system exceptions are contained in the "java.lang" package.
