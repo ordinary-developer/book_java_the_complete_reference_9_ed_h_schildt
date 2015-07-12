@@ -1,0 +1,35 @@
+ #################
+ access protection
+ #################
+
+ 
+ CLASSPATH
+ =========
+ 
+ How does the Java run-time system know where to look for packages?
+ - by default, the Java run-time system uses the current working directory
+   if your package is in a subdirectory of the current directory
+   it will be found
+ - you can specify a directory path or paths by setting 
+   the CLASSPATH environmental variable
+ - you can use the "-classpath" option with "java" and "javac"
+   to specify the path to your classes. 
+
+ When the second two options are used, the class path must not
+ include "MyPack", itself. It must simply specify the path to "MyPack".
+ 
+
+ access protection
+ ==================
+
+ default
+    class or package only
+
+ private
+    class only
+
+ protected
+    class, subclass or package only
+
+ public
+    all
