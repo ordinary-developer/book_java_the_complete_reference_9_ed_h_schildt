@@ -6,27 +6,22 @@
  Thread object methods
  =====================
 
- static Thread currentThread()
- ----------------------------
+ "static Thread currentThread()"
     returns a reference to the thread in which it is called
 
- static void sleep(long milliseconds) throws InterruptedException
- ----------------------------------------------------------------
+ "static void sleep(long milliseconds) throws InterruptedException"
     causes the thread from which it is called to supspend execution
     for the specified period of milliseconds.
 
- static void sleep(long milliseconds, int nanoseconds)
-  throws InterruptedException
- -----------------------------------------------------
+ "static void sleep(long milliseconds, int nanoseconds)
+  throws InterruptedException"
     allows you to specify the period in terms of milliseconds
     and nanoseconds
 
- final void setName(String threadName)
- -------------------------------------
+ "final void setName(String threadName)"
     allows you to set the name of a thread
 
- final String getName()
- ----------------------
+ "final String getName()"
     allows you to obtain the name of a thread
 
 
@@ -45,3 +40,16 @@
  Second, you can extend "Thread" class, and override its 
  "public void run()" method, and then call its 
  "public void start()" method.
+
+ 
+ "Thread" class isAlive and join methods
+ =======================================
+
+ "final boolean isAlive()"
+    The "isAlive()" thread's method returns true if the thread upon which it called
+    is still running. It returns false otherwise.
+
+ "final boolean join() throws InterruptedException"
+    This method waist until the thread on which it is called terminated.
+    Additional form of join() allows you to specify a maximum amount of time
+    that you want to wait for the specified thread to terminate.
