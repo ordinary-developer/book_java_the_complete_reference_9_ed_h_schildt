@@ -1,0 +1,47 @@
+ #########################
+ interthread communication
+ #########################
+
+
+ interthread communication
+ =========================
+
+ Java includes an interprocess communication mechanism via the
+ "wait()", "notify()", and "notifyAll()" methods.
+ These methods are implemented as final methods in "Object", 
+ so all classes have them. All three methods can be called only
+ from within a SYNCHRONIZED context. 
+
+ 
+ The rules for using the "wait()", "notify()" and "notifyAll" methods
+ ====================================================================
+ 
+ - wait()
+    tells the callling thread to give up the monitor and go to sleep
+    until some other thread enters the same monitor and calls
+    "notify()" or "notifyAll()".
+
+ - notify()
+    wakes up a thread that called "wait()" on the same object.
+
+ - notifyAll()  
+    wakes up all the threads that called "wait()" on the same object.
+    One of the threads will be granted access.
+
+ These methods are declared within Object, as shown here:
+ "final void wait() throws InterruptedException"
+ "final void notify()"
+ "final void notifyAll()"
+
+ Although "wait()" normally waits until "notify()" or "notifyAll()"
+ is called, there is a possibility that in very rare caess the waiting
+ thread could be awakened due to a spurious wakeup. In this case,
+ a waiting thread resumes without "notify()" or "notifyAll()" having
+ been called. (In essence, the thread resumes for no apparent reason.)
+ Because of this remote possibility, Oracle recommends that calls 
+ to "wait()" should take place withint a loop that checks the condition
+ on which the thread is waiting.
+
+
+
+ 
