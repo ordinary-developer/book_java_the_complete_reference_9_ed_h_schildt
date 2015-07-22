@@ -1,0 +1,21 @@
+ #############
+ type wrappers
+ #############
+
+ type wrappers
+ -------------
+
+ The type wrappers are 
+ Double, Float, Long, Integer, Short, Byte, Character, Boolean
+
+ The process of encapsulating a value within an object is called boxing.
+ The process of extracting a value from a type wrapper is called unboxing.
+
+ Autoboxing is the process by which a primitive type is automatically encapsulated
+ (boxed) into its equivalent type wrapper whenever an object of that type is needed.
+
+ Auto-unboxing is the process by which the value of a boxed object is automatically
+ extracted (unboxed) from a type wrapper when its value is needed.
+
+ In general, autoboxing and unboxing take place whenever a conversion into an object
+ or from an object is required.
