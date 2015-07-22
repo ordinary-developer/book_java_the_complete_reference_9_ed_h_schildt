@@ -1,0 +1,56 @@
+ ############
+ enumerations
+ ############
+
+ 
+ enumerations
+ ============ 
+
+ An enumeraion is created using the "enum" keyword.
+
+ --------------------------------------------------------------------
+ | enum Apple {                                                     |
+ |      Jonathan, GoldenDel, RedDel, Winesap, Cortland              |
+ | }                                                                |
+ --------------------------------------------------------------------
+
+ Each of the enumerations constans is an object of the class in which it is defined.
+ 
+ An enumerations can't inherit another class.
+ An enumeration cannot be a superclass.
+
+
+ the values() and valueOf() methods
+ ==================================
+
+ All enumerations automatically contain two predefined methods:
+
+ "public static enum-type[] values()"
+    returns an array that contains a list of the enumeration constants.
+    
+ "public static enum-type valueOf(String str)"
+    returns the enumerations contstant whose value correspends to the string
+    passed in str.
+
+ 
+ other enumeration methods
+ =========================
+
+ "final int ordinal()"
+    retuns a value that indicates an enumeration contant's position 
+    in the list of constants
+
+ "final int compareTo(enum-type e)"
+    returns a negative value, if the invoking constant has an ordinal value less than e
+    returns zero if the two ordinal values are the same
+    returns a posizitive value, if the invoking constant has an ordinal value greater than e
+    Remember, both the invoking constant and e must be the same enumeration.
+
+ You can compare for equality an enumeration constant with any other object bu using
+ "equals()", which overrides the "equals()" method defined by "Object". 
+ Although "equals()" can compare an enumeration constant to any other object, those
+ two objects will be equal only if they both refer to the same constant, within the 
+ same enumeration. Simply having ordinal values in common will not cause equals()
+ to return true if the two constants are from different enumerations.
+
+ Also you can compare two enumeration references for equality by using "==".
