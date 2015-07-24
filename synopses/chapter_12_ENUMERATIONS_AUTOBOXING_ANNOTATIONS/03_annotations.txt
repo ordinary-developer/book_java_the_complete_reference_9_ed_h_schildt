@@ -1,0 +1,86 @@
+ ###########
+ annotations
+ ###########
+
+ annotations basics
+ ==================
+
+ An annotations is created through a mechanism based on the "interface"
+ --------------------------------------------------------------------
+ | // A simple annotation type                                      |
+ | @interface MyAnno {                                              |
+ |     String str();                                                |
+ |     int val();                                                   |
+ | }                                                                |
+ --------------------------------------------------------------------
+ All annotations consist solely of method declarations. However, 
+ you don't provide bodies for these methods. Instead, Java implements
+ these methods. Moreover, the methods act much like fields, as you will see.
+
+ You can apply your annotation to something
+ --------------------------------------------------------------------
+ | @MyAnno(str = "Annotation Example", val = 100)                   |
+ | public static void myMeth() { //...                              |
+ --------------------------------------------------------------------
+
+ An annotation cannot include an "extends" clause. However, all
+ annotation types automatically extend the "Annotation" interface.
+ Thus, "Annotation" is a super-interface of all annotations.
+ It is declared within the "java.lang.annotation" package.
+ It overrides "hashCode()", "equals()", and "toString()", which
+ are defined by "Object". It also specifies "annotationType()",
+ which returns a "Class" object that represents the invoking
+ annotation. 
+
+ Any type of declaration (in JDK 8) can have an annotation
+ associated with it (classes, methods, fields, parameters,
+ enum constants, even annotations themselves).        
+
+ 
+ retention policy
+ ================
+
+ A retention policy determines at what point an annotation
+ is discarded. Java defindes thre such policies, which are 
+ encapsulated within the "java.lang.annotation.RetentionPolicy"
+ enumeration. 
+ They are "SOURCE", "CLASS", and "RUNTIME".
+
+ An annotation with a retention policy of "SOURCE" is retained
+ only in the source file and is discarded during compilation.
+
+ An annotation with a retention policy of "CLASS" is stored
+ in the .class file during compilation. However, it is not
+ available through the JVM during run time.
+
+ An annotation with a retentiond policy of "RUNTIME" is stored
+ in the .class file during compilation and is available through
+ the JVM during run time.
+ 
+
+ using default values
+ ====================
+
+ You can give annotation member default values that will be used 
+ if no value is specified when the annotation is applied. A default 
+ value is specified by adding a default clause to a member's 
+ declaration. It has this general form:
+
+ "type member() default vaule"
+
+ for example
+ --------------------------------------------------------------------
+ | @Retention(RetentionPolicy.RUNTIME)                              |
+ | @interface MyAnno {                                              |
+ |     String str() default "Testing";                              |       
+ |     int val() default 9000;                                      |
+ --------------------------------------------------------------------
+
+
+ marker annotations
+ ==================
+
+ A market annotation is a special kind of annotation that contains 
+ no members. Its sole purpose is to mark an item. Thus, its presence
+ as an annotation is sufficient.
+
