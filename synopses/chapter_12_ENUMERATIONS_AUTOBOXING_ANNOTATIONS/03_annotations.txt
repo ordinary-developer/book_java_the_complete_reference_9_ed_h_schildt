@@ -84,3 +84,23 @@
  no members. Its sole purpose is to mark an item. Thus, its presence
  as an annotation is sufficient.
 
+ 
+ annotations restrictions
+ ========================
+
+ No annotations can inherit another.
+
+ All method declared by an annotation must be withou parameters.
+
+ Furthermore, they must return one of the following
+ - a primitive type, such as "int" or "double"
+ - an object of type "String" or "Class"
+ - an "enum" type
+ - another annotation type
+ - an array of one of the preceding types
+
+ Annotations cannot be generic. (In other words, they cannot take
+ type parameters).
+ Annotation methods cannot specify a "throws" clause.
+ 
+
