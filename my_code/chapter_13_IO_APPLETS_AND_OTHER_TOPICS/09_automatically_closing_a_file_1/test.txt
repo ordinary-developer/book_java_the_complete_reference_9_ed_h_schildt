@@ -1,0 +1,3 @@
+This is a simple text file.
+We shall use this file in our program.
+

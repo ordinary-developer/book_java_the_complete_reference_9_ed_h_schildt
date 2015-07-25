@@ -1,0 +1,2 @@
+It is a file 'test.txt'.
+This file is a simple text file.

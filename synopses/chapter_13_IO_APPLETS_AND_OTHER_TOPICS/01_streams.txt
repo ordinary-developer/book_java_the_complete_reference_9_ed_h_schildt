@@ -1,0 +1,109 @@
+ #######
+ streams
+ #######
+
+ streams
+ =======
+
+ Java implements streams within class hierarchies defined in 
+ the "java.io" package.
+
+
+ the bytes stream classes
+ ========================
+
+ Byte streams defined using two class hierarchies. 
+ At the top are two abstract classes:
+ "InputStream" and "OutputStream"
+
+ Two of the most important methods of these classes are 
+ "read()" and "write()",
+ which, respectively, read and write bytes of data.
+
+
+ the character stream classes
+ ============================
+
+ Character streams are defined by using two class hierarchies.
+ At the top are two abstract classes:
+ "Reader" and "Writer"
+
+ Two of the most importatnt methods of these classes are
+ "read()" and "write()",
+ wthich reader and write characters of data, respectively.
+
+
+ reading console input
+ =====================
+
+ first it is necessary to create a BufferedReader object
+ --------------------------------------------------------------------
+ | BufferedReader br = new BufferedReader(new                       |
+ |                           InputStreamReader(System.in));         |
+ --------------------------------------------------------------------
+ then you from BufferedReader you can call
+ - "int read() throws IOException" method
+        to read a character from the input stream and return
+        an integer value
+ - "readLine() throws IOException" method
+        to read a string from the input stream and return
+        this String object.
+
+    
+ reading and writing files
+ =========================
+
+ Two of the most often-used stream classes are
+ "FileInputStream" and "FileOutputStream",
+ which create byte streams linked to files.
+
+ To open a file, you simply create an object of one of these classes,
+ specifying the name of the file as an arugment to the constructor.
+ - FileInputStream(String fileName) throws FileNotFoundException
+ - FileOutputStream(String fileName) throws FileNotFoundException
+
+ When you are done with a file, you must close it. This is done by calling
+ the "close()" method, which is implemented by both "FileInputStream" 
+ and "FileOutputStream".
+ - void close() throws IOException
+
+ To read from a file, you can use a version of "read()" that is defined
+ within "FileInputStream"
+ - int read() throws IOException
+ each time that it is called, it reads a single byte from the file and 
+ returns the byte as an integer value. "read()" return (-1) when the end
+ of the file is encountered.
+
+ to write to a file, you can use the "write()" method defined by 
+ "FileOutputStream"
+ - void write(int byteValue) throws IOException
+ This method writes the byte specifed to byteValue to the value.
+ Although byteValue is declared as an integer, only the low-order
+ eight bits are written to the file.
+
+
+ automatically closing a file
+ ============================
+
+ Automatic resource management is based on an expanded form of 
+ the try statement
+    try (resource-specification) {
+       // use the resource    
+    }
+
+ The try-with-resources statement can be used only with those
+ resources that implement the "AutoCloseable" interface
+ defined by java.lang. This interface defines the "close()"
+ method. "AutoCloseable" is inherited by the "Closeable"
+ interface in java.io. Both interfaces are implemented
+ by the stream classes.
+
+ --------------------------------------------------------------------
+ | try (FileInputStream fin = new FileInputStream(args[0])) {       |
+ |    // do something                                               |
+ | }                                                                |
+ | catch ...                                                        |
+ | ...                                                              |
+ --------------------------------------------------------------------
+
+
