@@ -1,0 +1,68 @@
+ ############
+ other topics
+ ############
+
+ using instanceof
+ ================
+
+ the instanceof operator has this general form:
+ "objref instanceof type"
+
+ Here, objref is a reference to an instance of a class, and type is a class type. If objref is of
+ the specified type or can be cast into the specified type, then the instanceof operator
+ evaluates to true.
+
+
+ using assert
+ =============
+ The assert keyword has two forms. The first is shown here:
+ "assert condition"
+ 
+ Here, condition is an expression that must evaluate to a Boolean result. If the result is true,
+ then the assertion is true and no other action takes place. If the condition is false, then the
+ assertion fails and a default AssertionError object is thrown.
+
+ The second form of assert is shown here:
+ "assert condition: expr;"
+ In this version, expr is a value that is passed to the AssertionError constructor. This value is
+ converted to its string format and displayed if an assertion fails. Typically, you will specify a
+ string for expr, but any non-void expression is allowed as long as it defines a reasonable
+ string conversion.
+
+
+ static import
+ =============
+
+ By following import with the keyword static, an import statement can be used to
+ import the static members of a class or interface. When using static import, it is possible
+ to refer to static members directly by their names, without having to qualify them with the
+ name of their class
+
+ There are two general forms of the import static statement. The first, which is used by
+ the preceding example, brings into view a single name. Its general form is shown here:
+ "import static pkg.type-name.static-member-name;"
+ Here, type-name is the name of a class or interface that contains the desired static member.
+ Its full package name is specified by pkg. The name of the member is specified by static-
+ member-name.
+
+ The second form of static import imports all static members of a given class or interface.
+ Its general form is shown here:
+ "import static pkg.type-name.*;"
+
+
+ invoking overloaded constructors through this()
+ ===============================================
+
+ When working with overloaded constructors, it is sometimes useful for one constructor
+ to invoke another. In Java, this is accomplished by using another form of the this keyword.
+ The general form is shown here:
+ "this(arg-list)"
+ When this( ) is executed, the overloaded constructor that matches the parameter list
+ specified by arg-list is executed first. Then, if there are any statements inside the original
+ constructor, they are executed. The call to this( ) must be the first statement within
+ the constructor.
+ 
+There are two restrictions you need to keep in mind when using this( ). First, you cannot
+ use any instance variable of the constructor’s class in a call to this( ). Second, you cannot use
+ super( ) and this( ) in the same constructor because each must be the first statement in the
+ constructor.
