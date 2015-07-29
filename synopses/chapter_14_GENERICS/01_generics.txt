@@ -1,0 +1,50 @@
+ ########
+ generics
+ ########
+
+ generics
+ ========
+
+ Generic class can be declared by the following line
+ --------------------------------------------------------------------
+ | class Gen<T> { // ...                                            |
+ --------------------------------------------------------------------
+
+ Generics work only with Reference Types
+ You cannot not use a primitive type, such as int or char.
+
+ Here is the full syntax for declaring a reference to a geneirc
+ class and insatnce creation:
+     class-name<type-arg-list> var-name =
+           new class-name<type-arg-list>(cons-arg-list);
+
+ When specifying a type parameter, you can create an upper
+ bound that declares the superclass from which all type
+ arguments must be derived.
+ "<T extends superclass>"
+ This specifies that T can only be replace by superclass, 
+ or subclass of superclass
+
+ When specifying a bound that has a class and an interface,
+ or multiple interfaces, use the "&" operator to connect them.
+ --------------------------------------------------------------------
+ | class Gen<T extends MyClass & MyInterface> { // ...              |
+ --------------------------------------------------------------------
+
+ The wildcard argument is specified by the ?, and it represents
+ an unknown type.
+ Here, "Stats<?>" matches any "Stats" object
+
+ To establish an upper bound for a wildcard, use the following type
+ of wildcard expression
+ "<? extends superclass>"
+ where "superclass" is the same of the class that serves as the upper
+ bound. This is an inclusive clause because the class forming 
+ the upper bound (that is, specified by "superclass") is also
+ within bounds
+
+ You can alos specify a lower bound for a wildcard by adding a "super"
+ clause to a wildcard declaration. Here is its general form
+ "<? super sublcass>"
+ In this case, only classes that are superclasses of "subclass" are
+ acceptable arguments. This is an inclusive clause.
