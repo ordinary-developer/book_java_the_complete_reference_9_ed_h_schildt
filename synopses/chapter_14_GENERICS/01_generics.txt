@@ -74,3 +74,22 @@
  type arguments
  "class class-name<type-param-list>
         implements interface-name<type-arg-list> { "
+
+ 
+  generic class hierarchies
+ =========================
+
+ The key difference between generic and non-generic hierachies
+ is that in a generic hierarchy, any type arguments needed
+ by a generic superclass must be passed up the hierarchy 
+ by all subclasses.
+ This is similar to the way that constructor arguments must
+ be passed up a hierarchy.
+
+
+ type inference with generics
+ ============================
+
+ When type inference is used, the declaration syntax
+ for a generic reference and instance creation has this general form:
+ "class-name<type-arg-list> var-name = new class-name<>(cons-arg-list);"

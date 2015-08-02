@@ -23,7 +23,7 @@
  ==================
 
  default
-    class or package only
+    class or package only (may be subclass also)
 
  private
     class only
