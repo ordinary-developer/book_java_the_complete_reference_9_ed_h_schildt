@@ -48,3 +48,29 @@
  "<? super sublcass>"
  In this case, only classes that are superclasses of "subclass" are
  acceptable arguments. This is an inclusive clause.
+
+
+ generic methods
+ ===============
+
+ An example of a generic method can be the following
+ --------------------------------------------------------------------
+ | static <T, V> boolean isIn(T x, V[] y) { // ...                  |
+ --------------------------------------------------------------------
+
+ Here is the syntax for a generic method:
+ "<type-param-list> ret-type meth-name (param-list) { // ..."
+
+ generic interfaces
+ ==================
+
+ In general, if a class implements a generic interface, then
+ that class must also be generic
+
+ Here is the generalized syntax for a generic interface:
+ "interface interface-name<type-param-list> { // ..."
+ 
+ When a generic inteface is implemented, you must specify the
+ type arguments
+ "class class-name<type-param-list>
+        implements interface-name<type-arg-list> { "
