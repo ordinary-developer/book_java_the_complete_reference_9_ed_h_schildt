@@ -93,3 +93,28 @@
  When type inference is used, the declaration syntax
  for a generic reference and instance creation has this general form:
  "class-name<type-arg-list> var-name = new class-name<>(cons-arg-list);"
+
+ 
+ generic restrictions 
+ ====================
+
+ type parameters can't be instantiated
+ -------------------------------------
+ It is not possible to create an instance of a type parameter.
+
+ restrictions on static members
+ ------------------------------
+ no static member (variable or method)
+ can use a type parameter declared by the enclosing class.
+ But you can declare static generic methods (outside the class)
+
+ generic array restrictions
+ --------------------------
+ First, you cannot instantiate an array whose element type is a type parameter.
+ Second, you cannot create an array of type-specific generic references.
+
+ generic exception restrictions
+ ------------------------------
+ A generic cannot extend "Throwable". This means that you cannot create
+ generic exceptions classes.
+ 
