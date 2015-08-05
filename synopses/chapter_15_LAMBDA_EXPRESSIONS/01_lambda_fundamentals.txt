@@ -1,0 +1,30 @@
+ ##################
+ lambda expressions
+ ##################
+
+ lambda expressions
+ ==================
+
+ A lambda expression is, essentially, an anonymous (that is, unnamed) method.
+ However, this method is not executed on its own.
+
+ A functional interface is an interface that contains one and only one 
+ abstract method.
+
+ A fucntional interface defines the target type of a lambda expression
+ A lambda expression can be used only in a context in which its
+ target type is specified.
+
+ Lambda operator "->" divides a lambda expression into two parts.
+ The left side specifies any paramters required by the lambda
+ expression (may be empty). On the right side is the lambda body,
+ which specified the actions of the lambda expression.
+
+ There are two types of lambda bodies.
+ One consists of a single expression,
+ and the other type consists of a block of code.
+
+ The lambda expression must be compatible with the abstract
+ method it is intented to implement.
+
+ Lambda expressions can be used in assignment contexts.
