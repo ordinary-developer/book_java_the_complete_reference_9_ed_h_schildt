@@ -57,3 +57,47 @@
  It is important to emphasize that a lambda expression can use and modify an instance
  variable from its invoking class. It just can’t use a local variable of its enclosing scope unless
  that variable is effectively final.
+
+
+ method references
+ =================
+
+ A method reference provides a way to refer to a method without 
+ executing it.  It related to lambda expressions because it, too,
+ requires a target type context that consists of a compatible
+ functional interface. When evaluated, a method reference also
+ create an instance of the functional interface.
+
+ 
+ method references to static methods 
+ ===================================
+
+ To create a static method reference, use the next syntax
+ "ClassName::methodName"
+ 
+
+ method references to instance methods
+ =====================================
+
+ To pass a reference to an instance method on a specific object
+ "objRef::methodName"
+ 
+ It is also possible to handle a situtation in which you want
+ to specify an instance method that can be used with
+ any object of a given class.
+ "ClassName::instanceMethodName"
+  With this form the first parameter of the functional
+ interface matches the invoking object and the second
+ parameter matches the parameter specified by the method.
+
+ 
+ Constructor References
+ ======================
+
+ You can create references to constructors
+ "classname::new"
+
+ To create a constructor reference for an array
+ "type[]::new"
+ Here, type specifes the type of object being created.
+ 
