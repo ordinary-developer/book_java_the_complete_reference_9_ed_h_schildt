@@ -28,3 +28,32 @@
  method it is intented to implement.
 
  Lambda expressions can be used in assignment contexts.
+ One of these contexts is created when a lambda expression is assigned
+ to a functional interface reference.
+
+ Other target type contexts include variable initialization,
+ return statements, and method arguments.
+
+ Another context is when lambda expression is passed as an argument.
+
+ In addition to variable initialization, assignment, and argument passing,
+ the following also constitute target type contexts: casts, the "?" operator
+ array initializers, "return" statements, and lambda expresions, themselves.
+
+
+ variable capture
+ ================
+
+ Variables defined by the enclosing scope of a lambda expression are accessible
+ whithin the lambda expresion.
+ However, when a lambda expression uses a local variable from its enclosing scope, a
+ special situation is created that is referred to as a variable capture. In this case, a lambda
+ expression may only use local variables that are effectively final. An effectively final variable is
+ one whose value does not change after it is first assigned. There is no need to explicitly
+ declare such a variable as final, although doing so would not be an error. (The this
+ parameter of an enclosing scope is automatically effectively final, and lambda expressions
+ do not have a this of their own.)
+
+ It is important to emphasize that a lambda expression can use and modify an instance
+ variable from its invoking class. It just can’t use a local variable of its enclosing scope unless
+ that variable is effectively final.
