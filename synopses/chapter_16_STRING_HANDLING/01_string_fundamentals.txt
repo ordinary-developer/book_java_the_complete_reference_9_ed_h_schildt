@@ -1,0 +1,67 @@
+ ###################
+ string fundamentals
+ ###################
+
+ string handling
+ ===============
+ 
+ Java implements strings as objects of type String.
+
+ Instances of type String are immutable.
+
+ The String, StringBuffer, and StringBuilder classes are
+ defined in java.lang.
+
+
+ constructors
+ ============
+   
+    - String()
+    - String(char chars[])
+    - String(char chars[], int startIndex, int numChars)
+    - String(String strObj)
+    - String(byte chrs[])
+    - String(byte chrs[], int startIndex, int numChars)
+    - String(StringBuffer strBufObj)
+    - String(StringBuilder strBuildObj)
+    - String(int codePoints[], int startIndex, int numChars)
+        here, codePoints is an array that contains Unicode code points.
+
+ For byte-to-character conversion the default character encoding
+ of the platform is used.
+
+
+ string length
+ =============
+
+ int length() - the "length()" method of a string
+
+
+ string concatenation
+ ====================
+
+ the "+" operator concatenates tow strings, 
+ producsing a "String" object as the result
+
+
+ toString() method
+ =================
+
+ The "toString()" method has this general form
+ "String toString()"
+
+ 
+ character extraction
+ ====================
+
+ - char charAt(int where) 
+        extracts an individual character
+ - void getChars(int sourceStart, int sourceEnd, char target[], int targetStart)
+        gets some characters from the string
+ - byte[] getBytes()   
+        gets byte-representation of the string
+ - char[] toCharArray()
+        converts all the character in a "String" object into a character array
+ 
+
+ 
