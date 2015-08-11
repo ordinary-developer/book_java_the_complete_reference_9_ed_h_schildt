@@ -1,0 +1,87 @@
+ #################
+ string comparison
+ #################
+
+ equals() and equalsIgnoreCase()
+ ===============================
+
+ To compare two strings for equality, use "equals()".
+ --------------------------------------------------------------------
+ | "boolean equals(Object str)"                                     |
+ --------------------------------------------------------------------
+ Here, str is the "String" object being compared with the invoking 
+ "String" object. It returns "true" if the string contain the same
+ characters in the same order, and "false" otherwise. 
+ The comparison is case-sensitive.
+
+ To perform a comparison that ignores case differences, call
+ --------------------------------------------------------------------
+ | "boolean equalsIgnoreCase(String str)"                           |
+ --------------------------------------------------------------------
+
+
+ regionMatches()
+ ===============
+
+ the "regionMatches()" method compares a specific region inside
+ a string with another specific region in another string.
+ 
+ The next form allows you to ignore case in such comparisions
+ --------------------------------------------------------------------
+ | "boolean regionMatches(int statIndex, String str2,               |
+ |                        int str2StartIndex, int numChars)         |
+ --------------------------------------------------------------------
+ The second form
+ --------------------------------------------------------------------
+ | boolean regionMatches(boolean ignoreCase,                        |
+ |                       int startIndex, String str2,               |
+ |                       int str2StartIndex, int numChars)          |
+ --------------------------------------------------------------------
+
+
+ startsWith() and endsWith()
+ ===========================
+
+ --------------------------------------------------------------------
+ | boolean startsWith(String str)                                   |
+ --------------------------------------------------------------------
+ determines whether a given String begins with a specified string.
+
+ --------------------------------------------------------------------
+ | boolean endsWith(String str)                                     |
+ --------------------------------------------------------------------
+ determines whether the String in question ends with s specified string.
+
+ --------------------------------------------------------------------
+ | boolean startsWith(String str, int startIndex)                   |
+ --------------------------------------------------------------------
+ lets you specify a starting point.
+
+
+ equals() versus ==
+ ==================
+
+ It is important to understand that the "equls()" method and the
+ "==" operator perform two different operations. 
+ The "equals()" method compares the characters inside a "String" object.
+ The "==" operator compares two object references to see whether
+ they refer to the same instance.
+
+ compareTo()
+ ===========
+
+ --------------------------------------------------------------------
+ | int compareTo(String str)                                        |
+ --------------------------------------------------------------------
+ Here, str is the "String" being compared with the invoking "String"
+ The result of the comparison
+ value  Meaning
+ -----  -------
+ < 0    The invoking string is less than str
+ > 0    The invoking string is greater than str
+ 0      The two strings are equal       
+
+ if you want to ignore case differences when comparing two strings
+ --------------------------------------------------------------------                                       
+ | int compareToIgnoreCase(String str)                              |
+ --------------------------------------------------------------------

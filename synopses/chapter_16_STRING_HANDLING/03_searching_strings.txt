@@ -1,0 +1,37 @@
+ #################
+ searching strings
+ #################
+
+ searching strings 
+ =================
+
+ The "String" class provides two methods that allow you to search
+ a string for s specifed character or substring
+ - indexOf() - searches for the first occurrence
+ - lastIndexOf() - searches for the last occurrence
+ 
+ These two methods are overloaded in severla different ways. 
+ In all cases, the methods return the index at which the
+ character or substring was found, or (-1) on failure.
+
+ - int indexOf(int ch) 
+       searches the first occurrence of a character
+ - int indexOf(int ch, int startIndex)
+        searches the first occurrence of a character
+        with the specified startingPoint
+ - int indexOf(String str)
+       searches the first occurrence of a substring
+ - int indexOf(String str, int startIndex)
+        searches the first occurrence of a substring
+        with the specified startingPoint
+    
+ - int lastIndexOf(int ch) 
+       searches the last occurrence of a character
+ - int lastIndexOf(int ch, int startIndex)
+        searches the last occurrence of a character
+        with the specified startingPoint
+ - int lastIndexOf(String str)
+       searches the last occurrence of a substring
+ - int lastIndexOf(String str, int startIndex)
+        searches the last occurrence of a substring
+        with the specified startingPoint
