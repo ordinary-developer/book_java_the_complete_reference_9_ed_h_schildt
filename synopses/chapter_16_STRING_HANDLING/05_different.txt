@@ -1,0 +1,52 @@
+ #########
+ different
+ #########
+
+ data conversion using valueOf()
+ ===============================
+
+ The "valueOf()" method converts data from its internal format 
+ into a human-readable form. It is a static method that overloaded
+ within "String" for all of Java's built-in types.
+
+ - static String valueOf(double num)
+ - static String valueOf(long num)
+ - static String valueOf(Object ob)
+ - static String valueOf(char chars[])
+
+ All of the simple types are converted to their common "String" representation.
+ Any object that you pass to "valueOf()" will return the result of a call to
+ the object's "toString()" method.
+
+ For most arrays, valueOf( ) returns a rather cryptic string, which indicates that it is an
+ array of some type. For arrays of char, however, a String object is created that contains the
+ characters in the char array. There is a special version of valueOf( ) that allows you to specify
+ a subset of a char array. It has this general form:
+ 
+ - static String valueOf(char chars[ ], int startIndex, int numChars)
+
+ 
+ changing the case of characters within a string 
+ ===============================================
+
+ - String toLowerCase()
+        converts all the characters in a string from uppercase to lowercase.        
+        Nonalphabetical characters, such as digits, are unaffected.
+
+ - String toUpperCase()
+        converts all the characters in a string from lowercase to uppercase.
+        Nonalphabetical characters, such as digits, are unaffected.
+
+ Overloaded versions of "toLowerCase()" and "toUpperCase()" that let you specify
+ a "Locale" object to govenr the conversion are also supplied.
+
+ 
+ joining strings
+ ===============
+
+ - static String join(CharSequence delim, CharSequence ... strs)    
+        concatenates two or more strings, separating each string with
+        a delimiter 
+
+ 
+ CharSequence it is an interface, implemented by "String" class.    

@@ -1,0 +1,54 @@
+ ##################
+ modifying a string
+ ##################
+
+ modifying a string
+ ==================
+
+ Because String objects are immutable, whenever you want to modify a String, you must
+ either copy it into a StringBuffer or StringBuilder, or use a String method that constructs a
+ new copy of the string with your modifications complete
+
+
+ substring()
+ ===========
+ 
+ You can extract a sbustring using "substring()"
+ 
+ - String substring(int startIndex)
+        returns a copy of the substring that begins at startIndex and runs to the end
+        of the invoking string
+ 
+ - String substring(int startIndex, int endIndex)
+        returns all characters from the beginning index, up to, but not including,
+        the ending index.
+
+
+ concat()
+ ========
+
+ You can concatenate two string using "concat()"
+ 
+ - String concat(String str)
+        creates a new object that contains the invoking string with the contents
+        of str appended to the end. concat() performs the same function as +.
+
+
+ replace()
+ =========
+
+ - String replace(char original, char replacement)
+        replaces all occurrences of one character in the invoking string
+        with another character and returns the resulting string
+
+ - String replace(CharSequence original, CharSequence replacement)
+        replaces one character sequence with another and returns
+        the resulting string
+
+ trim()
+ ======
+
+ - String trim()
+        returns a copy of the invoking string from which andy leading
+        and trailing whitespace has been removed.
+ 
