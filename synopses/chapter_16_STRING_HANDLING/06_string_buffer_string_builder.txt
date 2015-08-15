@@ -1,0 +1,93 @@
+ #############
+ String Buffer
+ #############
+
+ StringBuffer
+ ============
+
+ "String" represents fixed-lenght, immutable character sequence.
+ "StringBuffer" represents growable and writable character sequences.
+
+ 
+ StrinbBuffer's methods
+ ======================
+
+ StringBuffer constructors
+ 
+ - StringBuffer()
+ - StringBuffer(int size)
+ - StringBuffer(String str)
+ - StringBuffer(CharSequence chars)
+
+ other methods
+ 
+ - int length()
+        returns the current length of a "StringBuffer"
+ - int capacity()
+        returns the total allocated capacity
+
+ - void ensureCapacity(int minCapacity)
+        sets the size of the buffer
+
+ - void setLength(int len)
+        sets the length of the string within a "StringBuffer" object
+        the "len" value must be nonnegative
+
+ - char charAt(int where)
+        returns a single character at the position specified by "where" value
+        where must be nonnegative and must not specify a location 
+        beyond the end of the string
+
+ - void setCharAt(int where, char ch)
+        sets the value of a chararcter within a "StringBuffer" object
+        beyond the end of the string
+
+ - void getChars(int sourceStart, int sourceEnd, char target[], int targetStart)
+        copies a substring of a "StringBuffer" into an array
+        the substring contains the characters from (sourceStart) through (sourceEnd - 1)
+        the index within (target) at which the substring will be copied
+        is passed in targetStart.
+        The target array must be large enough to hold the number of characters
+        in the specified substring.
+
+ - StringBuffer append(String str)  |   concatenate the string representation of any other type
+ - StringBuffer append(int num)     |   of data to the end of the invoking "StringBuffer" object
+ - StringBuffer append(Object obj)  |-> The representation of each parameter is obtained, often
+                                    |   by calling "String.valueOf()"
+                                    |   The buffer itself is returned by each version of "append()"
+
+ - StringBuffer insert(int index, String str) |   
+ - StringBuffer insert(int index, char ch)    |-> insert one string into another
+ - StringBuffer insert(int index, Object obj) |
+
+ - StringBuffer reverse()
+        reverses the characters within a "StringBuffer" object
+
+ - StringBuffer delete(int startIndex, int endIndex)
+        deletes characters within a "StringBuffer" object
+        the substring deleted runs from (startIndex) to (endIndex - 1)
+
+ - StringBuffer deleteCharAt(int loc)
+        deletes a character from a (loc) position
+
+ - StringBuffer replace(int startIndex, int endIndex, String str)
+        replaces one set of characters whith another set inside a "StringBuffer" object
+        the substring at (startIndex) through (endIndex - 1) is replaced.
+        The replacement string is passed in "str". 
+        The resulting "StringBuffer" object is returned.
+
+ - String substring(int startIndex)
+        returns the substring that starts at (startIndex) and runs to the ned of the 
+        invoking "StringBuffer" object
+
+ - Sring substring(int startIndex, int endIndex)
+        returns the substring that starts at (startIndex) and runs through (endIndex - 1)
+
+
+ StringBuilder
+ =============
+
+ StringBuilder is similar to "StringBuffer" except for one important difference:
+ it is not synchronized, which means that it is not thread-safe.
+ The advantage of "StringBuilder" is fater perfomance.
+ 
