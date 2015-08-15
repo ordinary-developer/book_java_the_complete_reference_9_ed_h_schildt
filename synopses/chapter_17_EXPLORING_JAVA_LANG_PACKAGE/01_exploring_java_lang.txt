@@ -1,0 +1,50 @@
+ ###################
+ exploring java.lang
+ ###################
+
+ primitive type wrappers
+ =======================
+
+ Type wrappers encapsulate, or wrap, the primitive types whithin a class.
+
+ The abstract class "Number" defines a superclass that is implemented by the classes
+ that wrap the numeric types "byte", "short", "int", "long", "float", "double".
+ "Number" has abstract methods that return the value of the object in each 
+ of the different number formats
+
+ - byte byteValue()
+ - double doubleValue()
+ - float floatValue()
+ - int intValue()
+ - long longValue()
+ - short shortValue()
+
+
+ "Double" and "Float" are wrappers for floating-point values of type "double" and "float".
+
+ Their methods
+ 
+ - isInfinite()
+        returns true if the value being tested is infinitely large or small in magnitude
+
+ - isNaN()
+        returns true if the value being tested is not a number
+
+ The "Byte", "Short", "Integer", and "Long" classes are wrappers for "byte", "short", "int", 
+ and "long" integer types, respectively.
+
+
+ "Character" is a simple wrapper around a "char".
+
+
+ "Boolean" is a very thin wrapper around "boolean" values. 
+
+ 
+ other
+ =====
+
+ The abstract "Process" class encapsulates a process - that s, an executing program.
+
+ The "Runtime" class encapsulated the run-time environment. You cannot instantiate a "Runtime"
+ object, but you ca get a reference to the current "Runtime" object by calling the static
+ method "Runtime.getRuntime()"
