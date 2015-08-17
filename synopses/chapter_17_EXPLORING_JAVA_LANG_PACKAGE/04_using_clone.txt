@@ -1,0 +1,28 @@
+ #############
+ Using clone()
+ #############
+ 
+ using clone()
+ =============
+
+ The clone() method (the method of "Object" class)
+ generates a duplicate copy of the object on which it is called. 
+ Only classes that implement the "Cloneable" interface can be cloned.
+ 
+ The "Cloneable" interface defines no members. It is used to indicate that a class
+ allows a bitwise copy of an object (that is, a clone) to be mad. If you try to 
+ call "clone()" on a class that does not implement "Cloneable", a "CloneNotSupportedException"
+ is thrown. When a clone is made, the constructor for the object being cloned is not called.
+ As implemented by "Object", a clone is simply an exact copy of the original.
+
+ Cloning is a potentially dangerous action, because it can cause unintented side effects.
+
+ The singnature the method:
+
+ - Object clone() throws CloneNotSupportedException
+
+ "clone()" is declared as "protected" inside "Object". This means that is must 
+ either be called from within a method defined by the class that implements "Cloneable",
+ or it must be explicitly overridden by that class so that it is public.
+
+ In general, you should not implement "Cloneable" for any class without good reason.

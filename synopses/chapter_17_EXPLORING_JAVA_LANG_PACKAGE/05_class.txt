@@ -1,0 +1,11 @@
+ #####
+ Class
+ #####
+
+ Class
+ =====
+
+ "Class" encapsulates the run-time state of a class or interface.
+ Objects of type "Class" are created automaticlly, when classes are loaded.
+ You cannot explicitly declare a Class Object.
+ Generally, you obtain a "Class" object by calling the "getClass()" method defined by "Object"

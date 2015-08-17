@@ -1,0 +1,44 @@
+ #######
+ Runtime
+ #######
+
+
+ Runtime
+ =======
+
+ The "Runtime" class encapsulated the run-time environment. You cannot instantiate a "Runtime"
+ object, but you ca get a reference to the current "Runtime" object by calling the static
+ method "Runtime.getRuntime()"
+
+ an instance of the class Runtime has the next methods
+ 
+ - long totalMemory()
+        returns the total amount of memory for JVM
+
+ - long freeMemory()
+        returns the size of free memory fro JVM
+
+ - void gc()
+        initiates the calling of Java's garbage collector
+
+ - Process exec(...)
+        has several forms which allow you to name the program
+        you want to run as well as its input parameters.
+        The exec() methods returns a "Process" object, which
+        can then be used to control how your Java program
+        interacts with this new running process.
+
+ - destroy()
+        kills the subprocess
+
+ - waitFor()
+        causes your program to wait until the subprocess
+        finishes
+
+ - exitValue()
+        returns the value returned by the subprocess
+        when it is finished
+
+
+ ProcessBuilder provides another way to start and manager processes
+ (that is, programs)   

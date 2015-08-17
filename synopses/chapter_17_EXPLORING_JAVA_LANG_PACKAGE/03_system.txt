@@ -1,0 +1,32 @@
+ ######
+ System
+ ######
+
+ The "System" class holds a collection of static methods and variables.
+ The standard input, output, and error output of the Java run time
+ are stored in the "in", "out", and "err" variables.
+
+ - static long currentTimeMillis()
+        returns the current time in terms of milliseconds since
+        midnight, January 1, 1970.
+
+ - static long nanoTime()
+        returns the current time in terms of nanosecond 
+        (may be since midnight, January 1, 1970)
+
+ - static void arraycopy(Object source, int sourceStart,
+                         Object target, int targetStart, int size)
+        copies an array. The array to be copied is passed in "source",
+        and the index at which point the copy will begin within "source"
+        is passed in "sourceStart". The array that will receive the copy
+        is passed in "target", and the index at which point the copy will
+        begin within "target" is passed in "targetStart". "size" is the number
+        of elements that are copied.
+
+ - static String getProperty(String which)
+        retunrs the property associated with which. A null object
+        is returned if the desired property is not found
+ 
+ - static String getProperty(String which, String default)
+        returns the property associated with which. If the 
+        desired property is not found, default is returned
