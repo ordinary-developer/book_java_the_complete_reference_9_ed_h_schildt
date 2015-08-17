@@ -1,0 +1,9 @@
+ ####
+ Math
+ ####
+
+ Math
+ ====
+
+ The "Math" class contains all the floating-point functions that are used 
+ for geometry and trigonometry, as well as several general-purpose methods.
