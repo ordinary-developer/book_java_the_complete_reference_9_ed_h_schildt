@@ -1,0 +1,53 @@
+ ######################
+ Thread and ThreadGroup
+ ######################
+
+ Thread 
+ ======
+
+ "Thread" creates a new thread of execution. It implements "Runnable" and defines
+ the following constructors
+ 
+ - Thread()
+ - Thread(Runnable threadOb)
+ - Thread(Runnable threadOb, string threadName)
+ - Thread(String threadName)
+ - Thread(ThreadGroup groupOb, Runnable threadOb)
+ - Thread(ThreadGroup groupOb, Runnable threadOb, String threadName)
+ - Thread(ThreadGroup groupOb, String threadName)
+
+ "threadOb" is an instance of a class that implements the Runnable interface and 
+ defines where execution of the thread will begin. The name of the thread is 
+ specified by "threadName". When a name is not specified, one is created by the JVM.
+ "groupOb" specifies the thread group to which the new thread will belong.
+ When  no thread group is specified, the new thread belongs to the same group 
+ as the parent group.
+
+ The "Thread" class defines many methods (omitted here).
+
+
+ ThreadGroup
+ ===========
+
+ "ThreadGroup" creates a group of threads. It defines these two constructors:
+
+ - ThreadGroup(String groupName)
+ - ThreadGroup(ThreadGroup parentOb, String groupName)
+
+ For both forms, group Name specifies the name of the thread group. 
+ The first version creates a new group that has the current thread as its parent.
+ In the second form, the parent is specified by "parentOb".
+
+ It has many methods. Here are some of them
+ 
+ - void list()
+        Displays information about the group
+
+ - int activeCount()
+        returns the approximate number of active threads 
+        in the invoking group (including those in subgroups)
+
+ - int enumerate(Thread group[])
+        puts the active threads that comprise the invoking thread group
+        (including those in subgroups) into the group array.
+        (has some overloaded version)

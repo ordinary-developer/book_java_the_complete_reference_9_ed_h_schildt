@@ -1,0 +1,27 @@
+ #######
+ Package
+ #######
+
+ Package
+ =======
+
+ "Package" encapsulates version data associated with a package. 
+
+ The "Package" class has some methods
+
+ - static Package[] getPackages()
+        returns all packages about which the invoking
+        program is currently aware
+        (has another overloaded version)
+
+ - String getName()
+        returns the naem of the invoking package
+ 
+ - String getImplementationTitle()
+        returns the title of the invoking package
+
+ - String getImplementationVendor()
+        returns the name of the implementor of the invoking package
+
+ - String getImplementationVersion()
+        returns the version number of the invoking package
