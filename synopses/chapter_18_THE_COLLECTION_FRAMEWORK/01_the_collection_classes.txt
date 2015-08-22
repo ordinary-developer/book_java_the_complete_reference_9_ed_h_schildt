@@ -1,0 +1,29 @@
+ ######################
+ The collection classes
+ ######################
+
+ The ArrayList Class
+ ===================
+
+ The "ArrayList" class extends "AbstractList" and implements "List" inteface.
+ "ArrayList" is a generic class that has this declaration:
+    class ArrayList<E>
+ "ArrayList" supports dynamic arrays that can grow as needed.
+
+ "ArrayList" has the constructors shown here:
+ - ArrayList()
+ - ArrayList(Collection<? extends E> c)
+ - ArrayList(int capacity)
+
+ ArrayList's methods
+
+ - void ensureCapacity(int cap)
+        increases the capacity of the arraylist 
+ 
+ - void trimToSize()
+        reduces the size of the array that underlies an "ArrayList" object
+        so that it is precisely as large as the number of items that it is
+        currently holding.
+
+ - object[] toArray()               | -> covert an "ArrayList" to an array
+ - <T> T[] toArray(T array[])       |
