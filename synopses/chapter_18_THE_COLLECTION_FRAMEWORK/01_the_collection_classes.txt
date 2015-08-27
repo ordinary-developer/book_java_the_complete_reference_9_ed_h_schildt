@@ -2,6 +2,12 @@
  The collection classes
  ######################
 
+ the collection classes
+ ======================
+
+ All collection classes are situated in the "java.util.*" package.
+ 
+
  The ArrayList Class
  ===================
 
