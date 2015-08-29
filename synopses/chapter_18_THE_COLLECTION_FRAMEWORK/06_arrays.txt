@@ -1,0 +1,7 @@
+ ######
+ Arrays
+ ######
+
+ The "Arrays" class provides various methods that are useful
+ when working with arrays. These methods help bridge the gap
+ between collections and arrays.

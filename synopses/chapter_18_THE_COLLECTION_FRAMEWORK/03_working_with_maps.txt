@@ -1,0 +1,47 @@
+ #################
+ working with maps
+ #################
+
+ working with maps
+ =================
+
+ A map is an object that stores associations between keys and values, 
+ or key/value pairs. Given a key, you can find its value.
+ Both keys and values are objects. The key must be unique,
+ but the values may be duplicated. Some maps can accept a null key
+ and null values, others cannot.
+
+ Maps don't implement the "Iterable" interface. This means that you
+ cannot cycle throught a map using a for-each style "for" loop.
+ Furthermore, you can't obtain an iterator to a map.
+ However, as you will soon see, you can obtain a collection-view
+ of a map, which does allow the use of either the "for" loop
+ or an iterator.
+
+ 
+ the map interface
+ =================
+
+ The Map interface maps unique keys to values. A key is an object that you use to retrieve a
+ value at a later date. Given a key and a value, you can store the value in a Map object. After
+ the value is stored, you can retrieve it by using its key. Map is generic and is declared as
+ shown here:
+    interface Map<K, V>
+ Here, K specifies the type of keys, and V specifies the type of values.
+
+ Several methods throw a ClassCastException when an object is incompatible with the elements in a map.
+ A NullPointerException is thrown if an attempt is made to use a null object and null is not
+ allowed in the map. An UnsupportedOperationException is thrown when an attempt is
+ made to change an unmodifiable map. An IllegalArgumentException is thrown if an invalid
+ argument is used.
+ Maps revolve around two basic operations: get( ) and put( ). To put a value into a map,
+ use put( ), specifying the key and the value. To obtain a value, call get( ), passing the key as
+ an argument. The value is returned.
+ As mentioned earlier, although part of the Collections Framework, maps are not,
+ themselves, collections because they do not implement the Collection interface. However, you
+ can obtain a collection-view of a map. To do this, you can use the entrySet( ) method.
+ It returns a Set that contains the elements in the map. To obtain a collection-view of the keys,
+ use keySet( ). To get a collection-view of the values, use values( ). For all three collection-
+ views, the collection is backed by the map. Changing one affects the other. Collection-views
+ are the means by which maps are integrated into the larger Collections Framework.
+ 

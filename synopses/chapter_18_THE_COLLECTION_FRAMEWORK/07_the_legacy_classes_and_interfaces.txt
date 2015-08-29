@@ -1,0 +1,43 @@
+ #################################
+ The legacy classes and interfaces
+ #################################
+
+ Properties
+ ==========
+
+ "Properties" is a subclass of "Hashtable". It is used to maintain lists
+ of values in which the key is a "String" and the value is also a "String"
+
+ "Properties" defines these constructors:
+    - Properties()
+    - Properties(Properties propDefault)
+
+ The first version creates a "Properties" object that has no default values.
+ The second creates an object  that uses propDefault for its default values.
+ In both cases, the property list is empty.
+
+ One useful capability of the Properties class is that you can specify a default property
+ that will be returned if no value is associated with a certain key. For example, a default
+ value can be specified along with the key in the getProperty( ) method—such as
+ getProperty( "name" ,"default value"). If the "name" value is not found, then "default
+ value" is returned. When you construct a Properties object, you can pass another instance
+ of Properties to be used as the default properties for the new instance. In this case, if you
+ call getProperty("foo") on a given Properties object, and "foo" does not exist, Java looks
+ for "foo" in the default Properties object. This allows for arbitrary nesting of levels of
+ default properties.
+
+ 
+ Using store() and load()
+ ========================
+
+ One of the most useful aspects of "Properties" is that the information
+ contained in a "Properties" object can be easily stored to 
+ or loaded from disk with the "store()" and "load()" methods.
+
+ - void store(OutputStream streamOut, String description)
+    throws IOException
+ - void load(InputStream streamIn)
+    throws IOException
+
+ These methods have overloaded version, and also have versions
+ that allow writing to and reading from XML files.

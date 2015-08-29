@@ -1,0 +1,41 @@
+ ###########
+ comparators
+ ###########
+
+
+ Both TreeSet and TreeMap store elements in sorted order. However, it is the comparator
+ that defines precisely what “sorted order” means. By default, these classes store their
+ elements by using what Java refers to as “natural ordering,” which is usually the ordering
+ that you would expect (A before B, 1 before 2, and so forth). If you want to order elements
+ a different way, then specify a Comparator when you construct the set or map. Doing so
+ gives you the ability to govern precisely how elements are stored within sorted collections
+ and maps.
+
+ Comparator is a generic interface that has this declaration:
+    interface Comparator<T>
+ Here, T specifies the type of objects being compared.
+
+ Prior to JDK 8, the Comparator interface defined only two methods: compare( ) and
+ equals( ).
+
+ The compare( ) method, shown here, compares two elements for order:
+     int compare(T obj1, T obj2)
+ obj1 and obj2 are the objects to be compared. Normally, this method returns zero if the
+ objects are equal. It returns a positive value if obj1 is greater than obj2. Otherwise, a negative
+ value is returned. The method can throw a ClassCastException if the types of the objects
+ are not compatible for comparison. By implementing compare( ), you can alter the way that
+ objects are ordered. For example, to sort in reverse order, you can create a comparator that
+ reverses the outcome of a comparison.
+
+ The equals( ) method, shown here, tests whether an object equals the invoking
+ comparator:
+    boolean equals(object obj)
+ Here, obj is the object to be tested for equality. The method returns true if obj and the
+ invoking object are both Comparator objects and use the same ordering. Otherwise, it
+ returns false. Overriding equals( ) is not necessary, and most simple comparators will not
+ do so.
+
+ For many years, the preceding two methods were the only methods defined by
+ Comparator. With the release of JDK 8, the situation has dramatically changed. JDK 8 adds
+ significant new functionality to Comparator through the use of default and static interface
+ methods. Each is described here
