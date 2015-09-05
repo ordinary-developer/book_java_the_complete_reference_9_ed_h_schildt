@@ -1,0 +1,18 @@
+ ###### 
+ BitSet
+ ######
+
+ BitSet
+ ======
+
+ A "BitSet" class creates a special type of array that holds bit values
+ in the form of boolean values. This array can increase in size
+ and needed. 
+
+
+ constructors
+ ============
+ 
+ - BitSet()
+ - BitSet(int size)
+ 

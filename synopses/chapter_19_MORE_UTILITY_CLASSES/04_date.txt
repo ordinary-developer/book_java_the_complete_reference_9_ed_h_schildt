@@ -1,0 +1,19 @@
+ ####
+ Date
+ ####
+
+ date
+ ====
+
+ The "Date" class encapsulates the current date and time.
+
+
+ constructors
+ ============
+ 
+ - Date()
+ - Date(long millisec)
+
+ The first constructor initializes the object with the current date and time. The second
+ constructor accepts one argument that equals the number of milliseconds that have elapsed
+ since midnight, January 1, 1970.

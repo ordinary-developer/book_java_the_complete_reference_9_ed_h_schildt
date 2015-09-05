@@ -1,0 +1,47 @@
+ ###############
+ StringTokenizer
+ ###############
+
+ StringTokenizer
+ ===============
+ 
+ The "StringTokenizer" class parses the string (divides the string (text)
+ into a set of discrete parts (tokens)).
+
+ The "StringTokenizer" class implements the "Enumeration" interface.
+
+ To use "StringTokenizer", you specify an input string and a string that
+ contains delimiters. Delimiters are charatecters that separate tokens.
+
+
+ constructors
+ ============
+    
+    - StringTokenizer(String str)
+    - StringTokenizer(String str, String delimiters)
+    - StringTokenizer(String str, String delimiters, boolean delimAsToken)
+
+ In the third version, if "delimAsToken" is true, then the delimiters are 
+ also returned as tokens when the string is parsed.
+
+ The default set of delimters consists of the whitespace characters:
+ space, tab, form feed, newline, and carriage return.
+
+
+ methods
+ =======
+
+ methods 
+
+    - nextToken() - extracts consecutive tokens
+
+    - hasMoreTokens() - returns true while ther are more tokens
+                        to be extracted
+
+ Enumeration interface methods 
+
+    - nextElement() - the same as "nextToken()"
+    
+    - hasMoreElements() - the same as "hasMoreTokens()"
+
+ The "StringTokenizer" class is situated in the "java.util" package.

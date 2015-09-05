@@ -1,0 +1,43 @@
+ ########
+ Optional
+ ########
+
+ Optional
+ ========
+
+ The "optional" class offers a way to handle situations in which
+ a value may or may not be present.
+
+ It is shown here
+    class Optional<T>
+
+ Here, "T" specifies the type of value stored. It is important to understand
+ that an "Optional" instance can either contain a value of type "T" 
+ or be empty.
+
+ At the foundation of Optional are isPresent( ) and get( ). 
+
+ You can determine if a value is present by calling isPresent( ). 
+ If a value is available, it will return true. Otherwise, false is returned. 
+
+ If a value is present in an Optional instance, you can obtain it by calling get( ).
+ However, if you call get( ) on an object that does not contain a value,
+ NoSuchElementException is thrown. 
+ For this reason, you should always first confirm that a value is present
+ before calling get( ) on an Optional object.
+
+ Of course, having to call two methods to retrieve a value adds overhead to each access.
+ Fortunately, Optional defines methods that combine the check for a value with the retrieval
+ of the value. One such method is orElse( ). If the object on which it is called contains a
+ value, the value is returned. Otherwise, a default value is returned.
+
+ Optional does not define any constructors. Instead, you will use one of its methods to
+ create an instance. For example, you can create an Optional instance
+ with a specified value  by using of( ).
+ You can create an instance of Optional that does not contain a value by using empty( ).
+
+ The OptionalDouble, OptionalInt, and OptionalLong classes work much like Optional,
+ except that they are designed expressly for use on double, int, and long values, respectively.
+ As such, they specify the methods getAsDouble( ), getAsInt( ), and getAsLong( ),
+ respectively, rather than get( ). Also, they do not support the filter( ), ofNullable( ),
+ map( ) and flatMap( ) methods.
