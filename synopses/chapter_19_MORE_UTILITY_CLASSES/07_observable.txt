@@ -1,0 +1,48 @@
+ ##########
+ Observable
+ ##########
+
+ The Observable interface
+ ========================
+
+ The "Observable" class is used to create subclasses that other parts 
+ of your program can observe. When an object of such a subclass 
+ undergoes a change, observing classes are notified. 
+ Observing classes must implement the "Observer" interface,
+ which defines the "update()" method. The "update()" method is called
+ when an observer is notified of a change in an observed object.
+
+ An object that is being observed must follow two simple rules.
+ - First, if it has changed, it must call "setChanged()".
+ - Second, when it is ready to notify observers of this change, 
+   it must call "notifyObservers()". This causes the "update()" method
+   in the observing object(s) to be called.
+
+ Be careful - if the object calls "notifyObservers()" without
+ having previously called "setChanged()", no action will take place.
+ The observed object must call both "setChanged()" and "notifyObservers()"
+ before "update()" will be called.
+
+ "NotifyObservers()" has two forms:
+    - one that takes an argument 
+    - and one that does not.
+ If you call "notifyObservers()" with an argument, this object is passed
+ to the observer's "update()" method as its second parameter.
+ Otherwise, "null" is passed to "update()".
+
+ 
+ The Observer interface
+ ======================
+
+ To observe an observable object, you must implemetn the "Observer" interface.
+ 
+ This interface defines only the one method
+    - void update(Observable observOb, Object arg)
+ 
+ Here, "observOb" is the object being observed, and "arg" is the value 
+ passed by "notifyObservers()". 
+ The "update()" method is called when a changed in the observed object takes place.
+ 
+ 
+
+ 

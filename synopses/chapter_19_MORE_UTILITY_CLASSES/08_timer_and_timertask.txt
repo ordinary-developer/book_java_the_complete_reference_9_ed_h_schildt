@@ -1,0 +1,41 @@
+ ###################
+ Timer and TimerTask
+ ###################
+
+ Timer and TimerTask
+ ===================
+
+ "Timer" is the class that you will use to schedule a task for execution.
+ The task being scheduled must be an instance of "TimerTask".
+ Thus, to schedule a task, you will first create a "TimerTask" object
+ and then schedule it for execution using and instance of "Timer".
+
+ "TimerTask" implements the "Runnable" interaface; thus, it can be used
+ to create a thread of execution.
+
+ Its constructor is shown here:
+    protected TimerTask()
+
+ The "run()" method of the "TimerTask" class, defined by the Runnable interface,
+ contains the code that will be executed.
+ Thus, the easiest way to create a timer task is to extend TimerTask and override run( ).
+
+ Once a task has been created, it is scheduled for execution by an object of type Timer.
+
+ The constructors for Timer are shown here:
+ - Timer( )
+ - Timer(boolean DThread)
+ - Timer(String tName)
+ - Timer(String tName, boolean DThread)
+ 
+ The first version creates a Timer object that runs as a normal thread.
+ The second uses a daemon thread if DThread is true. 
+ A daemon thread will execute only as long as the rest of the program continues to execute. 
+ The third and fourth constructors allow you to specify a name for the Timer thread. 
+ 
+ Once a Timer has been created, you will schedule a task by calling schedule( ) on the
+ Timer that you created.
+
+ If you create a non-daemon task, then you will want to call cancel( ) to end the task when
+ your program ends. If you don’t do this, then your program may "hang" for a period of time.
+ 
