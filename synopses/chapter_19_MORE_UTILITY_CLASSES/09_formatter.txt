@@ -1,0 +1,32 @@
+ #########
+ Formatter
+ #########
+
+ Formatter
+ =========
+
+ The "Formatter" class provides format conversions that let you 
+ display numbers, strings, and time and date in virtually any format, you like.
+
+ The most widely used constructor is
+    - Formatter()
+
+ After you have created a "Formatter", you can use it to create a formatted
+ string. To do so use the "format()" method.
+    - Formatter format(String fmtString, Object ... args)
+
+ The "fmtString" consists of two types of items. 
+ The first type is composed of characters that are simply copied
+ to the output buffer. The second type contains format specifiers
+ that define the way the subsequent arguments are displayed.
+
+ In its simplest form, a format specifier begins with a percent sign followed
+ by the format conversion specifier.
+ In general, there must be the same number of arguments as there are format
+ specifiers, and the format specifiers and the arguments are matched 
+ in order from left to right.
+
+ When an uppercase specifier is used, then letters are shown in uppercase.
+
+ Java type-checks each format specifier against its corresponding argument.
+ If the argument doesn't match, an "IllegalFormatException" is thrown.
