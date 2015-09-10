@@ -1,0 +1,46 @@
+ #######
+ Scanner
+ #######
+
+ Scanner
+ ======
+
+ "Scanner" is the complement of "Formatter". It reads formatted input and
+ converts it into its binary form. Scanner can be used to read input from 
+ the console, a file, a string, or any source that implements 
+ the "Readable" interface or ReadableByteChannel. For example, you can
+ use "Scanner" to read a number from the keyboard and assign
+ its value to a variable.
+
+ A "Scanner" reads tokens from the underlying source that you specified
+ when the "Scanner" was created.
+
+ To use "Scanner" follow the next procedure:
+ 1. Determine if a specific type of input is available by calling one of 
+    "Scanner"'s "hasNextX" methods, where X is the type of data desired.
+ 2. If input is available, read it by calling one of Scanner's "nextX" methods.
+ 3. Repeat the process until input is exhausted.
+ 4. Close the "Scanner" by calling "close()".
+
+ If a "next" method cannot find the type of data it is looking for, 
+ it throws an "InputMismathException". A "NoSuchElementException" is thrown
+ if no more input is available.
+
+
+ Setting delimiters
+ ==================
+
+ "Scanner" defines where a token starts and ends based on a set of delimiters.
+ The default delimiters are the whitespace characters.
+
+ It is possible to change the delimiters by calling the next methods
+ of the "Scanner" class instance:
+
+    - useDelimiter(String pattern)
+    - useDelimiter(Pattern pattern) 
+
+ Here, "pattern" is a regular epxression that specifies the delimiter set.
+
+ You can obtain the current delimiter pattern by calling "delimiter()"
+
+    - Pattern delimiter()
