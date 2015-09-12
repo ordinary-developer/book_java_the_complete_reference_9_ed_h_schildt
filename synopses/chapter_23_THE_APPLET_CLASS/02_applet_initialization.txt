@@ -1,0 +1,34 @@
+ #####################################
+ Applet initialization and termination
+ #####################################
+
+ applet initialization and termination
+ =====================================
+
+ When an applet begins, the following methods are called, in this sequence:
+ 
+ 1. - init() 
+    The "init()" method is the first method to be called. This is where you should
+    initialize variables. This method is called only once during the run time of your applet.
+ 2. - start()
+    The "start()" method is called after "init()". It is also called to restart an applet 
+    after it has been stopped. Whereas "init()" is called once - the first time an applet 
+    is loaded - "start()" is called each time an applet's HTML document is displayed onscreen.
+ 3. - paint()
+    The "paint()" method is called each time an AWT-based applet's output must be redrawn.
+    The "paint()" method has one parameter of type "Graphics". This parameter will contain
+    the graphics context, which describes the graphics environment in which the applet 
+    is running.
+
+ When an applet is terminated, the following sequence of method calls takes place
+ 
+ 1. - stop()
+    The "stop()" method is caleld when a web browser leaves the HTML document
+    containing the applet - when it goes to another page, for example. 
+    When "stop()" is called, the applet is probably running. You should use "stop()"
+    to suspend threads that don't need to run when the applet is not visible.
+    You can restart them when "start()" is called if the user returns to the page.
+ 2. - destroy()
+    The "destroy()" method is called when the environment determines that your applet
+    needs to be removed completely from memory. At this point, you should free up any
+    resources the applet may be using. The "stop()" method is always called before "destroy()".
