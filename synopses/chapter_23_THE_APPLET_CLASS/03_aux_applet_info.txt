@@ -1,0 +1,55 @@
+ ###############
+ aux applet info
+ ###############
+
+ simple applet display methods
+ =============================
+
+ - void drawString(String message, int x, int y)
+    the member of the "Graphics" class, 
+    used to output a string to an applet.
+    Typically, it is called from within 
+    either "update()" or "paint()" method.
+
+ - void setBackground(Color newColor)
+    sets the background of an applet'w window
+
+ - void setForeground(Color newColor)
+    sets the foreground of an applet'w window
+
+
+ requesting repainting
+ =====================
+
+ Whenever your applet needs to update the information
+ displayed in its window, it simply calls "repaint()".
+
+ 
+ passing parameters to applets
+ =============================
+
+ the "APPLET" tag allows you to pass parameters to your applet.
+ To retrieve a parameter, use the "getParameter()" method.
+ It returns the value of the specified parameter in the form 
+ of a "String" object. Thus, for numeric and boolean values, 
+ you will need to convert their string representations into their
+ internal formats
+
+ Java will allow the applet to load data from the directory holding
+ the HTML file that started the applet (the document base) and the
+ directory from which the applet's class was loaded (the code base).
+ These directories are returned as URL objects by "getDocumentsBase()"
+ and "getCodeBase()". They can be concatenated with a string that
+ names the file you want to load.
+
+ To allow your applet to transfer control to another URL, you must
+ use the "ShowDocument()" method defined by the "AppletContext" 
+ interface.
+ "AppletContext" is an interface that lets you get information from
+ the applet's execution environment.
+ The context of the currently executing applet is obtained by a call
+ to the "getAppletContext()" method defined by "Applet".
+
+
+
+
