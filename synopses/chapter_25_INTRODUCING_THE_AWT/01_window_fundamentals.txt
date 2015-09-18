@@ -1,0 +1,24 @@
+ ################### 
+ window fundamentals
+ ################### 
+
+ window fundamentals
+ ===================
+
+ The AWT classes are contained in the "java.awt" package.
+
+ At the top of the AWT hierarchy is the "Component" class.
+
+ The "Container" class is a subclass of of "Component".
+ It has additional methods that allow other "Component" objects
+ to be nested within it.
+
+ The "Panel" class is a concrete subclass of "Container".
+
+ The "Window" class creates a top-level window.
+
+ The "Frame" class is a subclass of "Window" and has a title bar,
+ menu bar, borders, and resizing corners.
+
+ Derived from "Component", "Canvas" encapsulates a blank window
+ upon which you can draw.
