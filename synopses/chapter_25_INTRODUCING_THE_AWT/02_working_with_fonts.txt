@@ -1,0 +1,13 @@
+ ##################
+ working with fonts
+ ##################
+
+ working with fonts
+ ==================
+
+ Fonts have a family name, a logical font name, and a face name.
+
+ Fonts are encapsulated by the "Font" class.
+
+ To create a new font, construct a "Font" object 
+ that describes that font.
