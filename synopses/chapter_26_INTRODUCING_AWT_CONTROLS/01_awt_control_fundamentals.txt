@@ -1,0 +1,60 @@
+ ########################
+ awt control fundamentals 
+ ########################
+
+ awt control fundamentals
+ ========================
+
+ The awt supports the following types of controls:
+ 
+ - Labels
+ - Push buttons
+ - Check boxes
+ - Choice lists
+ - Lists
+ - Scroll bars
+ - Text Editing
+
+ These controls are subclasses of "Component".
+
+ 
+ labels
+
+ A label is an object of type "Label", and it contains a string,
+ which it displays. Labels are passive controls 
+ that do not support any interaction with the user.
+
+ Label defines the following constructors:
+ - Label( ) throws HeadlessException
+ - Label(String str) throws HeadlessException
+ - Label(String str, int how) throws HeadlessException
+
+ The first version creates a blank label. 
+ The second version creates a label that contains the string
+ specified by str. This string is left-justified. 
+ The third version creates a label that contains the string 
+ specified by str using the alignment specified by how. 
+
+ The value of "how" must be one of these three constants: 
+ Label.LEFT, Label.RIGHT, or Label.CENTER.
+ 
+ You can set or change the text in a label
+ by using the "setText()" method. 
+ You can obtain the current label by calling "getText()".
+
+ These methods are shown here:
+ - void setText(String str)
+ - String getText( )
+
+ For "setText( )", str specifies the new label.
+ For getText( ), the current label is returned.
+
+ You can set the alignment of the string within the label
+ by calling "setAlignment( )". To obtain the current alignment, 
+ call "getAlignment( )".
+ 
+ The methods are as follows:
+ - void setAlignment(int how)
+ - int getAlignment( )
+
+ Here, "how" must be one of the alignment constants shown earlier.
