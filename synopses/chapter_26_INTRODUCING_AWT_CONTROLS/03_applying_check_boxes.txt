@@ -1,0 +1,33 @@
+ ####################
+ applying check boxes
+ ####################
+
+ applying check boxes
+ ====================
+
+ A "check box" is a control that is used to turn an option on or off.
+
+ To retrieve the current state of a check box, call "getState()".
+ To set its state, call "setState()".
+ To obtain the current label associated with a check box,
+ call "getLabel()".
+ To set the label, call "setLabel()".
+
+
+ handling check boxes
+ ====================
+
+ Each time a check box is selected or deselected, an item event 
+ is generated. Each listener implements the "ItemListener" interface.
+ That interface defines the "itemStateChanged()" method.
+ An "ItemEvent" object is supplied as the argument to this method.
+
+
+ checkbox group
+ ==============
+
+ To create a set of mutually exclusive check boxes, you must first
+ define the group to which they will belong and then specify 
+ that group when you construct the check boxes.
+ Check box groups are objects of type "CheckboxGroup".
+
