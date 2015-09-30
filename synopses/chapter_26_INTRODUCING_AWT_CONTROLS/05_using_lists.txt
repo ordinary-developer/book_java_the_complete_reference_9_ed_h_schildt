@@ -1,0 +1,20 @@
+ ###########
+ using lists
+ ###########
+
+ using lists
+ ===========
+
+ The "List" class provides a compact, multiple-choice,
+ scrolling selection list.
+ A *List* object can be constructed to show any number of choices
+ in the visible window.
+
+
+ handling lists
+ ==============
+
+ Each time a "List" item is double-clicked, an "ActionEvent" object
+ is generated.
+ Also, each time an item is selected or deselected with a single click,
+ an "ItemEvent" object is generated.

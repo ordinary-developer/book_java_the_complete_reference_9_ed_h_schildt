@@ -1,0 +1,23 @@
+ ###############
+ choice controls
+ ###############
+
+ choice controls
+ ===============
+
+ The "Choice" class is used to create a pop-up list of items 
+ from which the user may choose.
+
+ "Choice" defines only the default constructor, which creates an
+ empty list.
+
+
+ handling choice lists
+ =====================
+
+ Each time a choice is selected, an item event is generated.
+
+ Each listener implements the "ItemListener" interface.
+ That interface defines the "itemStateChanged()" method.
+ An *ItemEvent* object is supplied as the argument to this method.
+

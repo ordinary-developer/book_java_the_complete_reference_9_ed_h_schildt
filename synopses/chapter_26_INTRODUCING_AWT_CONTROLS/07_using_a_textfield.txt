@@ -1,0 +1,16 @@
+ 
+ #################
+ using a textfield
+ #################
+
+ using a textfield
+ =================
+
+ The "TextField" class implements a single-line text-entry area,
+ usually called an edit control.
+
+
+ handling a textfield
+ ====================
+
+ When the user presses ENTER, an action event is generated.
