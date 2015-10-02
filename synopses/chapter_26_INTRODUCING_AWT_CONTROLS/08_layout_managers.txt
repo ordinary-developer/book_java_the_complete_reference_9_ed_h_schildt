@@ -58,3 +58,15 @@
  Each layout can be thought of as being on a separate index card
  in a deck that can be shuffled so that any card is on top at 
  a given time.
+
+
+ GridBagLayout
+ =============
+
+ If you use the "GridBagLayout" you can specify the relative
+ placement of components by specifying their positions within 
+ the cells inside a grid.
+
+ The key to the grid bag is that each component can be a different 
+ size, and each row in the grid can have a different number 
+ of columns.
