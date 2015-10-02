@@ -1,0 +1,60 @@
+ ###############
+ layout managers
+ ###############
+
+ layout managers
+ ===============
+
+ Each "Container" object has a layout manager associated with it.
+ A layout manager is an instance of any class that implements the 
+ "LayManager" inteface.
+ The layout manager is set by the "setLayout()" method.
+
+ If no call to "setLayout()" is made, then the default layout
+ manager is used.
+
+
+ FlowLayout
+ ==========
+
+ "FlowLayout" is the default layout manager.
+
+ "FlowLayout" implements a simple layout style, which is similar 
+ to how words flow in a text editor.
+
+
+ BorderLayout
+ ============
+
+ The "BorderLayout" class implements a common layout style 
+ for top-level windows. It has four narrow, fixed-width components
+ at the edges and one large area in the center. The four sides are
+ referred to as north, south, east, and west. The middle area 
+ is called the center.
+
+
+ Using insets
+ ============
+
+ To leave a small amount of space between the container that holds
+ your components and the window that contains it, override 
+ the "getInsets()" method that is defined by "Container". This method
+ returns an "Insets" object that contains the top, bottom, left, 
+ and right inset to be used when the container is displayed.
+
+
+ GridLayout
+ ==========
+
+ "GridLayout" lays out components in a two-dimensional grid.
+ When you instantiate a "GridLayout", you define the number of rows
+ and columns.
+
+
+ CardLayout
+ ==========
+
+ The "CardLayout" class can stores several different layouts.
+ Each layout can be thought of as being on a separate index card
+ in a deck that can be shuffled so that any card is on top at 
+ a given time.
