@@ -1,0 +1,13 @@
+ ###################
+ menu bars and menus
+ ###################
+
+ menu bars and menus
+ ===================
+
+ A top-level window can have a menu bar associated with it.
+ For this you can use the following classes: 
+ "MenuBar", "Menu", and "MenuItem".
+
+ In general, "MenuBar" contains one or more "Menu" objects.
+ Each "Menu" objects contains a list of "MenuItem" objects.
