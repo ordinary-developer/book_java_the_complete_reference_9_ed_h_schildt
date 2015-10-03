@@ -1,0 +1,24 @@
+ ############
+ dialog boxes
+ ############
+
+ dialog boxes
+ ============
+
+ Dialog boxes may be modal or modeless.
+
+ When a modal dialog box is active, all input is directed to it
+ until it is closed.
+
+ When a modeless dialog box is active, input focus can be directed
+ to another window in your program.
+
+
+ FileDialog
+ ==========
+
+ Java provides a built-in dialog box that lets the user specify a file.
+
+
+
+

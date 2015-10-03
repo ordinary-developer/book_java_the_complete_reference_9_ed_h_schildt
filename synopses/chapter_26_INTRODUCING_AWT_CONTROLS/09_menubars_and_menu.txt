@@ -11,3 +11,10 @@
 
  In general, "MenuBar" contains one or more "Menu" objects.
  Each "Menu" objects contains a list of "MenuItem" objects.
+
+ Menus generate events only when an item of type "MenuItem" 
+ or "CheckboxMenuItem" is selected. Each time a menu item is selected,
+ an "ActionEvent" object is generated.
+
+ Each time a check box menu item is checked or unchecked, 
+ an "ItemEvent" object is generated.
