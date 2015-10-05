@@ -1,0 +1,31 @@
+ #################
+ introducing swing
+ #################
+
+ introducing swing
+ =================
+
+ A swing GUI constists of two key items: components and containers.
+
+
+ Components
+ ==========
+
+ In general, Swing components are derived from the "JComponent" class.
+ All of Swing's components are represented by classes defined 
+ within the package "javax.swing".
+
+
+ Containers
+ ==========
+
+ Swing defines two types of containers.
+
+ The first are top-level containers:
+ "JFrame", "JApplet", "JWindow" and "JDialog".
+ They do not inherit "JComponent" but inherit the AWT classes 
+ "Component" and "Container".
+ The top-level containers are heavyweight.
+
+ The second type of containers are lightweight containers.
+ Lightweight containers do inherit "JComponent".
