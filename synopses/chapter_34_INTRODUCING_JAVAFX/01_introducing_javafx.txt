@@ -1,0 +1,79 @@
+ ##################
+ introducing javafx
+ ##################
+
+ introducing javafx
+ ==================
+
+ The central metaphor implemented by JavaFX is the stage. 
+ A stage contains a scene.
+
+ A stage is a container for scenes and a scene is a container 
+ for the items that comprise the scene.
+
+ "Stage" is a top-level container. All JavaFX applications 
+ automatically have access to one stage, called the primary stage.
+
+
+ Nodes
+ =====
+
+ The individual elements of a scene are called nodes. For example,
+ a push button is a node.
+
+ Nodes can also consist of group of nodes.
+ A node can have a child node. In this case the node is called 
+ a parent node or branch node.
+
+ Nodes without children are terminal nodes and are called leaves.
+
+ The collection of all nodes in a scene creates a scene graph,
+ which comprises a tree.
+
+ The root node is the top-level node and is the only node 
+ in the scene graph that does not have a parent.
+
+ The base class for all nodes is "Node".
+
+
+ Layouts
+ =======
+
+ The layout panes are packaged in "javafx.scene.layout".
+
+
+ The Application Class
+ =====================
+
+ A JavaFX application must be a subclass of the "Application" class,
+ which is packaged in "javafx.application". Thus, your application 
+ class will extend "Application".
+
+ The "Application" class defines three life-cycle methods 
+ that your application can override. 
+ These are called "init()", "start()" and "stop()", 
+ and are shown here, in order in which they are called:
+
+  - void init()
+  - abstract void start(Stage primaryStage)
+  - void stop()
+
+ The "init()" method is called when the application begins execution.
+ It is used to perform various initializations. 
+ Hoverever, it cannot be used to create a stage or build a scene.
+ If no initializations are required, this method need not be overridden
+ because an empty, default version is provided.
+
+ The "start()" method is called after "init()". This is where your
+ application begins and it can be used to construct and set the scene.
+ It is passed a reference to a "Stage" object. This is the stage 
+ provided by the run-time system and is the primary stage.
+ This method is abstract. 
+ Thus, it must be overridden by your application.
+
+ When your application is terminated, the "stop()" method is called.
+ It is here that you can handle any cleanup or shutdown chores.
+ In cases in which no such actions are needed, 
+ an empty, default version is provided.
+
+ 
