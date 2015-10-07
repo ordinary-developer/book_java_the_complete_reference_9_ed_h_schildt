@@ -1,0 +1,20 @@
+ #####
+ Label
+ #####
+
+ Label
+ =====
+
+ The JavaFX label is an instance of the "Label" class, 
+ which is packaged in "javafx.scene.control".
+
+ "Label" inherits the "Labeled" and "Control" classes.
+
+ Once you have created a label (or any other control), it must be 
+ added to the scene's content, which means adding to the scene graph.
+ To do this, you will first call "getChildren()" on the root node
+ of the scene graph. It returns a list of the child nodes in the form
+ of an "ObservableList<Node>". "ObservableList" is packaged in 
+ "javafx.collections", and it inherits "java.util.List". Using 
+ the returned list of child nodes, you can add the label to the list
+ by calling "add()", passing a reference to the label.

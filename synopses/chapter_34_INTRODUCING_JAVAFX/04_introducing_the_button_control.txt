@@ -1,0 +1,19 @@
+ ##############################
+ Introducing the button control
+ ##############################
+
+ Button control
+ ==============
+
+ In JavaFX, the push button control is provided by the "Button" class,
+ which is in "javafx.scene.control".
+
+ When a button is pressed, and "ActionEvent" is generated.
+ "ActionEvent" is packaged in "javafx.event". You can register a 
+ listener for this event by using "setOnAction()", which has this
+ general form:
+ --------------------------------------------------------------------
+ | final int setOnAction(EventHandler<ActionEvent> handler)         |
+ --------------------------------------------------------------------
+ Here, handler is the handler being registered.
+
