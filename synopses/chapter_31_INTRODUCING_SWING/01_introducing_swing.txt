@@ -29,3 +29,12 @@
 
  The second type of containers are lightweight containers.
  Lightweight containers do inherit "JComponent".
+
+
+ Event handling
+ ==============
+ 
+ The event handling mechanism used by Swing it the same 
+ that used by the AWT.
+ Events specific to Swing are stored in "javax.swing.event".
+
