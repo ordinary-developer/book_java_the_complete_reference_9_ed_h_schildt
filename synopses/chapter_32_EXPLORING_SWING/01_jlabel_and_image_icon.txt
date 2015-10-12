@@ -1,0 +1,42 @@
+ ####################
+ JLabel and ImageIcon
+ ####################
+
+ JLabel
+ ======
+
+ "JLabel" defines the next constructors:
+    - JLabel(Icon icon)
+    - JLabel(String str)
+    - JLabel(String str, Icon icon, int align)
+
+ The "align" argument specifies the horizontal alignemnt of the text
+ and/or icon within dimensions of the label. It must be one of the
+ following values: "LEFT", "RIGHT", "CENTER", "LEADING", "TRAILING".
+ These constants are defined in the "SwingConstants" interface.
+
+
+ ImageIcon
+ =========
+
+ Icons are specified by objects of type "Icon", which is an interface
+ defined by Swing. The "ImageIcon" class implements "Icon" and 
+ encapsulates an image. You can read an image from a file or download
+ it from a URL.
+
+ One of "ImageIcon"'s constructors
+    - ImageIcon(String filename)
+        It obtains the image in the file named "filename"
+
+ The icon and text associated with the label can be obtained by the
+ following methods:
+    - Icon getIcon()
+    - String getString()
+
+ The icon and text associated with the label can be set by the 
+ following methods:
+    - void setIcon(Icon icon)
+    - void setText(String str)
+
+
+ 

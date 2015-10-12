@@ -1,0 +1,30 @@
+ #######
+ JButton
+ #######
+
+ JButton
+ =======
+
+ The "JButton" class provides the functionality of a push button.
+ "JButton" allows an icon, a string, or both to be associated 
+ with the push button.
+
+ Three of its constructors are shown here:
+    - JButton(Icon icon)
+    - JButton(String str)
+    - JButton(String str, Icon icon)
+
+ When the button is pressed, an "ActionEvent" is generated.
+ Using the "ActionEvent" object passed to the "actionPerformed()"
+ method of the registered "ActionListener", you can obtain the
+ action command string associated with the button. By defautl, this is
+ the string displayed inside the button. 
+
+ However, you can set the action command by calling 
+ "setActionCommand()" on the button. You can obtain the action 
+ command by calling "getActionCommand()" on the event object. 
+ It is declared like this:
+    String getActionCommand()
+
+
+ 

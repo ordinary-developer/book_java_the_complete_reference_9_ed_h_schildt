@@ -1,0 +1,45 @@
+ #############
+ JToggleButton
+ #############
+
+ JToggleButton
+ =============
+
+ "JToggleButton" has two states: pushed and released.
+
+ Toggle buttons are objects of the "JToggleButton" class.
+ "JToggleButton" implements "AbstractButton".
+ "JToggleButton" is a superclass for two other components, that also
+ represents two-state controls: "JCheckBox" and "JRadioButton".
+
+ One of the constructors
+    - JToggleButton(String str)
+ By default, the button is in off position.
+
+ "JTobbleButton" generates an action event and an item event.
+
+ To handle action events, you must implement the "ActionListener" 
+ interface.
+
+ To handle item events, you must impolement the "ItemListener"
+ interface. Each time an item event is generated, it is passed to 
+ the "itemStateChanged()" method defined by "ItemListener".
+
+ Inside "itemStateChanged()", the "getItem()" method can be called
+ on the "ItemEvent" object to obtain a reference to the "JToggleButton"
+ instance that generated the event. It is shown here:
+ --------------------------------------------------------------------
+ | Object getItem()                                                 |
+ --------------------------------------------------------------------
+
+ The easiest way to determine a toggle button's state is by calling
+ the "isSelected()" method (inherited from "AbstractButton") on the
+ button that generated the event.
+ --------------------------------------------------------------------
+ | boolean isSelected()                                             |
+ --------------------------------------------------------------------
+ It returns true if the button is selected and false otherwise.
+
+ 
+ 
+

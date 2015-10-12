@@ -1,0 +1,17 @@
+ ###########
+ Check Boxes
+ ###########
+
+ The "JCheckBox" class provides the functionality of a check box.
+
+ "JCheckBox" defines several constructors.
+ The one used here is
+    - JCheckBox(String str)
+
+ When the user selects or deselects a check box, an "ItemEvent" 
+ is generated. You can obtain a reference to the "JCheckBox" that
+ generated the event by calling "getItem()" on the "ItemEvent" passed
+ to the "itemStateChanged()" method defined by "ItemListener".
+
+ The easiest way to determine the selected state of a check box
+ is to call "isSelected()" on the "JCheckBox" instance.

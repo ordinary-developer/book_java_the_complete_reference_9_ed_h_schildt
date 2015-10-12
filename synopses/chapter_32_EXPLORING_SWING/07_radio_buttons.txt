@@ -1,0 +1,36 @@
+ #############
+ Radio buttons
+ #############
+
+ Radio buttons
+ =============
+
+ Radio buttons are a group of mutually exclusive buttons, in which
+ only one button can be selected at any one time.
+
+ One of its constructors
+    - JRadioButton(String str)
+
+ Radio buttons must be configured into a group. A button group 
+ is created by the "ButtonGroup" class. Elements are then added 
+ to the button group via the following method:
+ --------------------------------------------------------------------
+ | void add(AbstractButton ab)                                      |
+ --------------------------------------------------------------------
+
+ A "JRadioButton" generates action events, item events, and 
+ change events each time the button selection changes.
+
+ You can use a number of different ways to determine which button
+ was selected.
+
+ First, you can check its action command by calling 
+ "getActionCommand()". By default, the action command is the same
+ as the button label, but you can set the action command to something
+ else by calling "setActionCommand()" on the radio button.
+
+ Second, you can call "getSource()" on the "ActionEvent" object 
+ and check that reference against the buttons.
+
+ Third, you can check each radio button to find out which one is
+ currently selected by calling "isSelected()" on each button.

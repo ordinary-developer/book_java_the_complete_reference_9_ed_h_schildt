@@ -1,0 +1,27 @@
+ ##########
+ JTextField
+ ##########
+
+ JTextField
+ ==========
+
+ "JTextField" allows you to edit one line of text. It is derived from
+ "JTextComponent". "JTextField" uses the "Document" interface for its
+ model.
+
+ Three of "JTextField"'s constructors are shown here:
+    - JTextField(int cols)
+    - JTextField(String str, int cols)
+    - JTextField(String str)
+ Here, "str" is the string to be initially presented, and "cols" is
+ the number of columns in the text field. If no string is specified,
+ the text field is initially empty. If the number of columns is not
+ specified, the text field is sized to fit the specified string.
+
+ "JTextField" generates events in response to user interaction.
+ For example, an "ActionEvent" is fired when the user presses ENTER.
+ A "CaretEvent" is fired each time the caret (i.e., the cursor) 
+ changes position. ("CaretEvent" is packaged in "javax.swing.event").
+
+ To obtain the text currently in the text field, call "getText()".
+
