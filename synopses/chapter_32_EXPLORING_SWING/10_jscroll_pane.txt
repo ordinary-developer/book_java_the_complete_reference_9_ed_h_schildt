@@ -1,0 +1,25 @@
+ ###########
+ JScrollPane
+ ###########
+
+ basic
+ =====
+
+ "JScrollPane" is a lightweight container that automatically handles
+ the scrolling of another component.
+
+ "JScrollPane" defines several constructors.
+ One of them
+    - JScrollPane(Component comp)
+ The component to be scrolled is specified by "comp".
+
+ Scroll bars automatically displayed when the content of the pane
+ exceeds the dimensions of the viewport (the viewable area 
+ of a scroll pane).
+
+ Here are the steps to follow to use a scroll pane:
+ 1. Create the component to be scrolled.
+ 2. Create an instance of "JScrollPane", 
+    passing to it the object to scroll.
+ 3. Add the scroll pane to the content pane.
+ 

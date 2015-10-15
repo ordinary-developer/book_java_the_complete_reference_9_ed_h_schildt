@@ -1,0 +1,25 @@
+ ###########
+ JTabbedPane
+ ###########
+
+ JTabbedPane
+ ===========
+
+ "JTabbedPane" encapsulates a tabbed pane.
+
+ "JTabbedPane" has three constructors.
+ Its default constructor creates and empty control with the tabs
+ positioned accross the top of the pane.
+
+ Tabs are added by calling "addTab()".
+    - void addTab(String name, Component comp);
+ Here, "name" is the name for the tab, and "comp" is the component
+ that should be added to the tab.
+
+ Often, the component added to a tab is a "JPanel" that contains 
+ a group of related components.
+
+ The general procedure to use a tabbed pane is outlined here:
+ 1. Create an instance of "JTabbedPane".
+ 2. Add each tab by calling "addTab()".
+ 3. Add the tabbed pane to the content pane.
