@@ -1,0 +1,35 @@
+ #####
+ JList
+ #####
+
+ basic
+ =====
+
+ In Swing, the basic list class is called "JList". It supports the selection 
+ of one or more items from a list.
+
+ "JList" is now declared like this:
+    class JList<E>
+ Here, "E" represents the type of the items in the list.
+
+ "JList" provides several constructors. 
+ One of them is
+    - JList(E[] items)
+
+ "JList" is based on two models. 
+ The first is "ListModel". This interface defines how access to the list data
+ archieved.
+ The second model is the "ListSelectionModel" interface, which defines
+ methods that determine what list item or items are selected.
+
+ It is usefull to wrap a "JList" inside a "JScrollPane".
+
+ A "JList" generated a "ListSelectionEvent" when the user makes or changes
+ a selection. This event is alos generated when the user deselects an item.
+ It is handled by implementing "ListSelectionListener". This listener
+ specifies only one method, called "valueChanged()"
+    - void valueChanged(ListSelectionEvent le)
+ Here, "le" is a reference to the event.
+
+ Both "ListSelectionEvent" and "ListSelectionListener" are packaged 
+ in javax.swing.event.
