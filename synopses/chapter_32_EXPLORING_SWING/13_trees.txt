@@ -1,0 +1,42 @@
+ #####
+ Trees
+ #####
+
+ basic
+ =====
+
+ A tree is a component that presents a hierarchical view of data. 
+ The user has the ability to expand or collapse individual subtrees in 
+ this display. Trees are implemented in Swing by the "JTree" class.
+
+ A simpling of its constructors is shown here:
+    - JTree(Object obj[])
+    - JTree(Vector<?> v)
+    - JTree(TreeNode tn)
+
+ Althouge "JTree" is packaged in "javax.swing", its support classes
+ and interfaces are packaged in "javax.swing.tree".
+
+ A "JTree generates a variety of events, but three relate specifically to trees
+ - "TreeExpansionEvent"
+ - "TreeSelectionEvent"
+ - "TreeModelEvent"
+
+ A "TreeExpansionEvent" is generated when a node is expanded or collapsed.
+ A "TreeSelectionEvent" is generated when the user selects or deselect
+ a node within the tree.
+ A "TreeModelEvent" is fired when the data or structure of the tree changes.
+ The listeners for these events are respectively
+ - "TreeExpansionListener"
+ - "TreeSelectionListener"
+ - "TreeModelListener"
+
+ The tree event classes and listener interfaces are packaged in 
+ "javax.swing.event".
+
+ Here are the steps to follow to use a tree:
+ 1. Create an instance of "JTree".
+ 2. Create a "JScrollPane" and specify the tree as the object to be scrolled.
+ 3. Add the tree to the scroll pane.
+ 4. Add the scroll pane to the content pane.
+
