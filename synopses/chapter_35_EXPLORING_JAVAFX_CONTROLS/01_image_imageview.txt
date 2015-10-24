@@ -1,0 +1,33 @@
+ ###################
+ Image and ImageView
+ ###################
+
+ Image and ImageView
+ ===================
+
+ At the foundation for JavaFX's support for images are two classes:
+ - "Image"
+ - "ImageView"
+ "Image" encapsulates the image, itself, 
+ and "ImageView" managers the display of an image.
+ Both classes are packaged in "javafx.scene.image".
+
+ The "Image" class loads an image form either an "InputStream", a URL,
+ or a path to the image file.
+
+ One of "Image"'s constructors:
+    - Image(String url)
+ Here, "url" specifies a "URL" or a path to a file that supplies the image.
+
+ "Image" is not derived from "Node". 
+ Thus, it cannot, itself, be part of a scene graph.
+
+ Once you have an "Image", you will use "ImageView" to display it.
+ "ImageView" is derived from "Node", which means that it can be part 
+ of a scene graph.
+
+ One ot its constructors:
+    - ImageView(Image image);
+ This constructor creates an "ImageView" that uses "image" for its image.
+
+  
