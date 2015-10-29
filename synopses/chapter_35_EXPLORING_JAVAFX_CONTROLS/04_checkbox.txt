@@ -1,0 +1,25 @@
+ ########
+ CheckBox
+ ########
+
+ CheckBox
+ ========
+
+ The "CheckBox" class encapsulates the functionality of a check box.
+ 
+ Its immediate superclass is "ButtonBase".
+
+ "CheckBox" support three states. The first two are checked or 
+ unchecked. The third state is indeterminate (undefined).
+
+ It is typically used to indicate that the state of the check box
+ has not been set or that it is not relevant to a specific situation.
+ If you need the indeterminate state, you will need to explicitly 
+ enable it.
+
+ "CheckBox" defines two constructors.
+    - CheckBox() // default constructor
+    - CheckBox(String str)
+      Here str identifies the checkbox.
+
+

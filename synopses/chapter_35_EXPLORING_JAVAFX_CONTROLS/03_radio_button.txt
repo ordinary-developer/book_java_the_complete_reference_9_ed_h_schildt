@@ -1,0 +1,55 @@
+ ############
+ RadionButton
+ ############
+
+ RadionButton
+ ============
+
+ Radio buttons are a group of mutually exclusive buttons, in which
+ only one button can be selected at one time.
+
+ They are supported by "RadioButton" class, which extends both
+ "ButtonClass" and "ToggleButton". It also implements the "Toggle"
+ interface.
+
+ To create a radio button, you can use the next constructor:
+ --------------------------------------------------------------------
+ | RadioButton(String str)                                          |
+ --------------------------------------------------------------------
+ Here, "str" is the label for the button.
+
+ Like other buttons, when a "RadioButton" is used, an action event 
+ is generated.
+
+ For their mutually exclusive nature to be activated, radio buttons
+ must be configured into a group. A button group is created by 
+ the "ToggleButton" class, which is packaged in "javafx.scene.control"
+ "ToggleGroup" provides only a default constructor.
+
+ Radio buttons are added to the toggle group by calling the 
+ "setToggleGroup()" method, defined by "ToggleButton", on the button.
+ --------------------------------------------------------------------
+ | final void setToggleGroup(ToggleGroup tg)                        |
+ --------------------------------------------------------------------
+ Here, "tg" is a reference to the toggle button group to which 
+ the button is added.
+
+ You can call "setSelected()" on the button that you want to select.
+ It is defined by "ToggleButton" 
+ (which is a superclass of "RadioButton").
+ --------------------------------------------------------------------
+ | final void setSelected(boolean state)                            |
+ --------------------------------------------------------------------
+ If "state" is true, the button is selected. 
+ Otherwise it is deselected.
+ Although the button is selected, no action event is generated.
+
+ A second way to initially select a radio button is to call "fire()"
+ on the button.
+ --------------------------------------------------------------------
+ | void fire()                                                      |
+ --------------------------------------------------------------------
+ This method results in an action event being generated for the button
+ if the button was previously not selected.
+
+

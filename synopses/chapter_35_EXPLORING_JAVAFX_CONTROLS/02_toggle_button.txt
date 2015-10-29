@@ -1,0 +1,26 @@
+ ############
+ ToggleButton
+ ############
+
+ ToggleButton
+ ============
+
+ In JavaFX, a toggle button is encapsulated 
+ in the "ToggleButton" class.
+ "ToggleButton" is derived from "ButtonBase". It implements the 
+ "Toggle" interface.
+
+ One of its constructor
+    - ToggleButton(String str)
+ Here, "str" is the text displayed in the button.
+
+ A "ToggleButton" generates an action event when it is pressed.
+
+ A "ToggleButton" is used to let the user select an option.
+ When the button is pressed, the option is selected.
+ When the button is released, the option is deselected.
+
+ To do this, use the "isSelected()" method
+ --------------------------------------------------------------------
+ | final boolean isSelected()                                       |
+ --------------------------------------------------------------------
