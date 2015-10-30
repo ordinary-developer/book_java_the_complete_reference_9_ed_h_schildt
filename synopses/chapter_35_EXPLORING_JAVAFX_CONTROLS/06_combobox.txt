@@ -1,0 +1,51 @@
+ ########
+ ComboBox
+ ########
+
+ ComboBox
+ ========
+
+ A combo box component is implemented in JavaFX by the 
+ "ComboBox" class.
+
+ "ComboBox" inherits "ComboBoxBase", which provides much of its
+ functionality. 
+ "ComboBox" is designed for single-selection.
+
+ "ComboBox" is a generic class that is declared like this:
+ ------------------------------------
+ | class ComboBox<T>                |
+ ------------------------------------
+ Here, "T" specifies the type of entries.
+
+
+ constructors
+ ============
+
+ "ComboBox" defines two constructors.
+      ------------------------------------
+    - | ComboBox()                       |
+      ------------------------------------
+      creates an empty "ComboBox"
+      ------------------------------------
+    - | ComboBox(ObservableList<T> list) |
+      ------------------------------------
+      lets you specify the list of entries
+
+ A "ComboBox" generates an action event when its selection changes.
+ It will also generate a change event.
+
+ You can obtain the current selection by calling "getValue()"
+ ------------------------------------
+ | final T getValue()               |
+ ------------------------------------
+ If the value of a combo box has not yet been set, then "getValue()"
+ returns null.
+
+ To set the value of a "ComboBox" under program control, call
+ "setValue()"
+ ------------------------------------
+ | final void setValue(T newValue)  |
+ ------------------------------------
+
+

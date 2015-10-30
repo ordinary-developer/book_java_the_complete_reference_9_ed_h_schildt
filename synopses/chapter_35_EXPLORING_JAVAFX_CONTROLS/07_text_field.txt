@@ -1,0 +1,32 @@
+ #########
+ TextField
+ #########
+
+ TextField
+ =========
+
+ A "TextField" control allows one line of text to be entered.
+ "TextField" inherits "TextInputControl".
+
+
+ constructors
+ ============
+
+ "TextField" defines two constructors.
+ The first is the default constructor, which creates an empty 
+ text field that has the defautl size.
+ The second lets you specify the initial contents of the field.
+
+
+ auxiliary
+ =========
+
+ To specify a size of a component, 
+ call "setPrefColumnCount(int columns)"
+ --------------------------------------------------------------------
+ | final void setPrefColumnCount(int columns)                       |
+ --------------------------------------------------------------------
+ The "columns" value is used by "TextField" to determine its size.
+
+ You can set the text in a text field by calling "setText()".
+ You can obtain the current text by calling "getText()".
