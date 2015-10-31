@@ -1,0 +1,48 @@
+ ##########
+ ScrollPane
+ ##########
+
+ ScrollPane
+ ==========
+
+ "ScrollPane" provides scrolling capabilities to any node in 
+ a scene graph.
+
+ When a "ScrollPane" is used, scrollbars are automatically 
+ implemented that scroll the contents of the wrapped node.
+
+ 
+ constructors
+ ============
+      -----------------------------------
+    - | ScrollPane()                    |
+      -----------------------------------
+      -----------------------------------     
+    - | ScrollPane(Node content)        |
+      -----------------------------------     
+      lets you specify a node that you want to scroll.
+
+
+ auxiliary
+ =========
+
+ You can set the viewport (the viewable area of a scroll pane)
+ dimensions by using these two methods:
+ --------------------------------------------------------------------
+ | final void setPrefViewportHeight(double height)                  |
+ --------------------------------------------------------------------
+ --------------------------------------------------------------------
+ | final void setPrefViewportWidth(double width)                    |
+ --------------------------------------------------------------------
+
+ to turn on an ability to pan the contents by draggin the mouse,
+ use "setPannable()"
+ --------------------------------------------------------------------
+ | final void setPannable(boolean enable)                           |
+ --------------------------------------------------------------------
+ If "enable" is true, then panning is allowed.
+ Otherwise, it is disabled.
+ 
+
+
+ 
