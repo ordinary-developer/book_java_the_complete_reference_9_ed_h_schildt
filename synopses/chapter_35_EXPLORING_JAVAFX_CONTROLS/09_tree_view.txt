@@ -1,0 +1,60 @@
+ ########
+ TreeView
+ ########
+
+ TreeView
+ ========
+
+ "TreeView" presents a hierarchical view of data 
+ in a tree-like format.
+
+ "TreeView" is a generic class that is defined like this:
+ ------------------------------------
+ | class TreeView<T>                |
+ ------------------------------------
+ Here, "T" specifies the type of value held by an item in the tree.
+
+
+ constructors
+ ============
+ One of its constructor
+ ------------------------------------
+ | TreeView(TreeItem<T> rootNode)   |
+ ------------------------------------
+ Here, "rootNode" specifies the root of the tree. Because all nodes
+ descene from the root, it is the only one that needs to be passed.
+
+
+ auxiliary
+ =========
+
+ The items that form the tree are objects of type "TreeItem".
+ "TreeItem" does not inherit "Node". 
+ Thus, "TreeItems" are not general-purpose objects.
+ They can be used in a "TreeView", but not as stand-alone controls.
+
+ "TreeItem" is a generic class, as shown here:
+ ------------------------------------
+ | class TreeItem<T>                |
+ ------------------------------------
+ Here, "T" specifies the type of value held by the "TreeItem".
+
+ To construct a tree, you must first create the root.
+ Next, add other nodes to that root. You do this by calling either
+ "add()" or "addAll()" on the list returned by "getChildren()".
+ These other nodes can be leaf nodes or subtrees. After the tree
+ has been constructed, you create the "TreeView" by passing the root
+ node to its constructor.
+
+ You can handle selection events in the "TreeView" in a way
+ similar to the way that you handle them in a "ListView", 
+ through the use of a change listener.
+ First, obtain the selection model by calling "getSelectionModel()".
+ Then, call "selectedItemProperty()" to obtain the  property 
+ for the selected item. On that return value, call "addListener(()"
+ to add a change listener.
+
+ You can obtain the value of a "TreeItem" by calling "getValue()".
+ To obtain the parent, call "getParent()".  
+ To obtain the children, call "getChildren()".
+
