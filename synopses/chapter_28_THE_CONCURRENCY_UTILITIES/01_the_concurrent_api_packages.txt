@@ -1,0 +1,41 @@
+ ###########################
+ The concurrent api packages
+ ###########################
+
+ The concurrent api packages
+ ===========================
+
+ The concurrency utilities are containted 
+ in the "java.util.concurrent" package and in its two subpackages:
+ "java.util.concurrent.atomic" and "java.util.concurrent.locks"
+
+
+ java.util.concurrent
+ ====================
+
+ "java.util.concurrent" defines the core features that support
+ alternatives to the built-in approaches to synchronization 
+ and interthread communication
+
+ It defines
+ - Synchronizers
+ - Executors
+ - Concurrent collections
+ - The Fork/Join Framework"
+
+
+ java.util.concurrent.atomic
+ ===========================
+
+ "java.util.concurrent.atomic" faciliates the use of variables in 
+ a concurrent environment. It provides a means of efficiently
+ updating the value of a variable without the use of locks.
+
+
+ java.util.concurrent.locks
+ ==========================
+ "java.util.concurrent.locks" provides an alternative to use of 
+ synchronized methods.
+ At the core of this alternative is the "Lock" inteface, 
+ which defines the basic mechanism used to acquire and relinqiush
+ access to an object.
